@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестирование требований и документации</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">QA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./sobesedovanie.html">Собеседование</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./testingtypes.html"
+                >Виды и методы тестирования</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./documentation.html"
+                >Тестирование требований и документации
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Postman</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bash</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div>
+        <p>
+          <i class="text-info">Требование (requirement)</i> - описание того,
+          какие функции и с соблюдением каких условий должно выполнять
+          приложение в процессе решения полезной для пользователя задачи
+        </p>
+      </div>
+      <div>
+        <h4 class="text-center">КАКУЮ ДОКУМЕНТАЦИЮ НУЖНО ТЕСТИРОВАТЬ?</h4>
+        <p class="text-info">
+          <ins>Проектную документацию (project documentation)</ins>
+        </p>
+        <ul>
+          <li>требования к программному продукту (product requirements)</li>
+          <li>
+            функциональные спецификации к программному продукту (functional
+            specifications)
+          </li>
+          <li>архитектуру (architecture) и дизайн (design)</li>
+          <li>план проекта (project plan) и тестовый план (test plan)</li>
+          <li>тест кейсы и сценарии (test cases, test scenarios)</li>
+        </ul>
+        <p class="text-info">
+          <ins
+            >Сопроводительную документацию (и документацию для пользователей):
+          </ins>
+        </p>
+        <ul>
+          <li>интерактивную помощь (on-line help)</li>
+          <li>
+            руководства по установке (Installation guide) и использованию
+            программного продукта (user manual)
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-center">ТИПЫ ТРЕБОВАНИЙ</h4>
+        <p>
+          <i class="text-info"
+            >Функциональные требования (functional requirements)</i
+          >
+          - что система должна делать
+        </p>
+        <p>
+          <i class="text-info"
+            >Нефункциональные требования (non-functional requirements)</i
+          >
+          - как система должна это делать Требования, относящиеся не к
+          функциональности, а к таким атрибутам как: надежность эффективность
+          практичность сопровождаемость переносимость
+        </p>
+      </div>
+      <div class="text-center">
+        <h4 class="text-center">УРОВНИ ТРЕБОВАНИЙ</h4>
+        <img class="img-fluid" src="../img/scale_1200.png" alt="" />
+      </div>
+      <div>
+        <h4 class="text-center">ПУТИ ВЫЯВЛЕНИЯ ТРЕБОВАНИЙ</h4>
+        <ul class="list-group" class="list-group-item">
+          <li class="list-group-item">ИНТЕРВЬЮ</li>
+          <li class="list-group-item">СЕМИНАРЫ</li>
+          <li class="list-group-item">НАБЛЮДЕНИЕ</li>
+          <li class="list-group-item">АНКЕТИРОВАНИЕ</li>
+          <li class="list-group-item">ПРОТОТИПИРОВАНИЕ</li>
+          <li class="list-group-item">САМОСТОЯТЕЛЬНОЕ ОПИСАНИЕ</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-center">СВОЙСТВА ХОРОШЕГО ТРЕБОВАНИЯ</h4>
+        <p>Каждое требование должно быть:</p>
+        <ul class="list-group" class="list-group-item">
+          <li class="list-group-item">Завершённым (complete)</li>
+          <li class="list-group-item">Непротиворечивым (consistent)</li>
+          <li class="list-group-item">Корректным (correct)</li>
+          <li class="list-group-item">Недвусмысленным (unambiguous)</li>
+          <li class="list-group-item">Проверяемым (verifiable)</li>
+        </ul>
+        <p>Наборы требований должны быть:</p>
+        <ul class="list-group" class="list-group-item">
+          <li class="list-group-item">Модифицируемыми (modifiable)</li>
+          <li class="list-group-item">Прослеживаемыми (traceable)</li>
+          <li class="list-group-item">
+            Проранжированными по важности, стабильности и срочности (ranked for
+            importance, stability and priority).
+          </li>
+        </ul>
+        <p>
+          <i class="text-info">Завершённость (completeness) </i>
+          - Проблемы незавершённости (неполноты): Отсутствуют нефункциональные
+          требования или нефункциональные составляющие требования. Мы знаем, что
+          система должна делать, но не КАК она должна это делать.
+        </p>
+        <p>Рекомендуется задавать общие вопросы. Их преимущества:</p>
+        <ul>
+          <li>универсальные</li>
+          <li>не навязывают решение</li>
+          <li>
+            не загоняют заказчика в ситуацию, когда ему приходится выбирать из
+            имеющихся вариантов
+          </li>
+        </ul>
+        <p>
+          Хорошая аналогия – вопросы репортера (или маленького ребёнка): «А
+          что?», «А зачем?», «А почему?»
+        </p>
+        <p>
+          <i class="text-info">Непротиворечивость (consistency) </i>
+          - Противоречия внутри одного требования. Противоречия между двумя и
+          более требованиями. Противоречия между таблицами и текстом.
+          Противоречия между картинкой и текстом. Противоречия между требованием
+          и прототипом.
+        </p>
+        <p>
+          <i class="text-info">Корректность (correctness) </i>
+          - Проблемы некорректности Ошибки могут быть вызваны:
+        </p>
+        <ul>
+          <li>опечатками, последствиями «copy-paste»</li>
+          <li>
+            остатками устаревших требований наличием «озолочения» («gold
+            plating») наличием технически невыполнимых требований
+          </li>
+          <li>
+            наличием неаргументированных требований к дизайну и архитектуре
+          </li>
+        </ul>
+        <p>
+          <i class="text-info">Недвусмысленность (unambiguousness) </i>
+          - Если что-то можно понять несколькими способами, можно быть
+          уверенным, что разные люди поймут это по-разному, допускающей двоякого
+          толкования
+        </p>
+        <p>
+          В английском языке есть много слов-индикаторов, наличие которых в
+          требовании должно насторожить тестировщика: <br />
+          Adequate, be able to, easy, provide for, as a minimum, be capable of,
+          effective, timely, as applicable, if possible, TBD, as appropriate, if
+          practical, at a minimum, but not limited to, capability of, capability
+          to, normal, minimize, maximize, optimize, rapid, user-friendly,
+          simple, often, usual, large, flexible, robust, state-of-the-art,
+          improved, efficient.
+        </p>
+        <p>
+          <i class="text-info">Проверяемость (verifiability) </i>
+          - Как понять, что требование непроверяемо? Попробовать придумать
+          несколько тестов для его проверки. Если тесты не придумываются – вот
+          она, проблема
+        </p>
+        <p>
+          <i class="text-info">Модифицируемость (modifiability) </i>
+          - Проблемы немодифицируемости: После каждого обновления требований
+          понадобится тратить недели чтобы выловить все появившиеся
+          противоречия.
+        </p>
+        <p>
+          <i class="text-info">Прослеживаемость (traceability) </i>
+          - Если требования не пронумерованы, не имеют чёткого оглавления, не
+          имеют работающих перекрёстными ссылок – это хаос. А в хаосе ошибки
+          плодятся с удивительной скоростью.
+        </p>
+        <p>
+          <i class="text-info">Проранжированность (ranked for…) </i>
+        </p>
+        <ul>
+          <li>по важности (importance)</li>
+          <li>по стабильности (stability)</li>
+          <li>по срочности (priority)</li>
+        </ul>
+        <p>
+          Если требования не проранжированы по важности, стабильности и
+          срочности, мы рискуем уделить основное внимание не тому, что на самом
+          деле важно для заказчика.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-center">ТЕХНИКИ ТЕСТИРОВАНИЯ ТРЕБОВАНИЙ</h4>
+        <ul class="list-group" class="list-group-item">
+          <li class="list-group-item">взаимный просмотр (peer review)</li>
+          <li class="list-group-item">вопросы</li>
+          <li class="list-group-item">тест кейсы</li>
+          <li class="list-group-item">рисунки, схемы и т.д</li>
+        </ul>
+        <p>
+          <i class="text-info">Взаимный просмотр (peer review) </i>
+          - Обычно, выделяют три уровня перепросмотра: Неформальный
+          перепросмотр. Двое коллег просто обмениваются листиками (файликами) и
+          правят найденные ошибки, которые потом обсуждаются за чашкой чая или в
+          любое другое относительно свободное время Технический перепросмотр
+          выполняется группой специалистов Формальная инспекция.
+        </p>
+        <p>
+          <i class="text-info">Вопросы </i>
+          - Самый простой и не требующий большого опыта способ – задавать как
+          можно больше вопросов
+        </p>
+        <p>Как задать вопрос более опытному коллеге/разработчику/заказчику:</p>
+        <ul class="list-group" class="list-group-item">
+          <li class="list-group-item">
+            узнайте особенности проекта, у кого что спрашивать
+          </li>
+          <li class="list-group-item">
+            приоритизируйте вопросы, начинайте с маленьких наиболее важных
+            вопросов, сначала заработайте репутацию
+          </li>
+          <li class="list-group-item">
+            не задавайте вопрос в формате «Я ничего не понял», правильнее будет
+            сказать «Я разобрался в том - то, но остался вопрос по этой части»
+          </li>
+          <li class="list-group-item">
+            упомяните важность ответа на ваши вопросы (например, невозможно
+            начать писать тест-кейсы)
+          </li>
+          <li class="list-group-item">
+            вместо 3-го письма предложите собраться на короткое совещание и
+            обсудить вопросы устно (в meeting follow-up можно будет вставить
+            оставшиеся вопросы)
+          </li>
+          <li class="list-group-item">попытайтесь найти решение сами</li>
+          <li class="list-group-item">1 общий вопрос вместо 10 мелких</li>
+          <li class="list-group-item">
+            не задавайте общие вопросы в письмах, предлагайте варианты
+          </li>
+          <li class="list-group-item">
+            хорошие личные взаимоотношения помогают
+          </li>
+          <li class="list-group-item">простые предложения, простой язык</li>
+          <li class="list-group-item">
+            попросите коллег перечитать, если вопрос сложный
+          </li>
+          <li class="list-group-item">
+            добавляйте скриншоты, мокапы, рисунки, схемы
+          </li>
+        </ul>
+        <b>Нужно ли уточнять длину полей и правила валидации? </b>
+        <i>Однозначно да: </i>
+        <ul>
+          <li>обязательность для заполнения</li>
+          <li>чувствительность к регистру</li>
+          <li>длина</li>
+          <li>разрешенные символы</li>
+          <li>языки</li>
+          <li>значения по умолчанию</li>
+          <li>тексты сообщений</li>
+        </ul>
+        <b>Что делать с ответом? </b>
+        <ul>
+          <li>расценивайте ответ как новое требование</li>
+          <li>есть ли расхождения с тем, что нам уже известно?</li>
+          <li>актуализируйте свои тесты, согласно новым данным</li>
+          <li>
+            получили ли вы нужное представление о интересующем вас вопросе?
+          </li>
+          <li>
+            нет – задайте дополнительные вопросы (иногда нужно 5+ циклов
+            вопрос/ответ, чтобы решить проблему)
+          </li>
+          <li>документируйте/сохраняйте ответы.</li>
+        </ul>
+        <p>
+          <i class="text-info">Тест кейсы </i>
+          -Когда вы видите требование, спросите себя: «Как я буду его
+          тестировать? Какие тесты очевидно покажут, что это требование
+          реализовано правильно?» Во время написания тест кейсов возникнут новые
+          вопросы.
+        </p>
+        <p>
+          <i class="text-info">Рисунки, схемы и т.д. </i>
+          -Когда вы видите требование, спросите себя: «Как я буду его
+          тестировать? Какие тесты очевидно покажут, что это требование
+          реализовано правильно?» Во время написания тест кейсов возникнут новые
+          вопросы
+        </p>
+      </div>
+      <div>
+        <h4 class="text-center">ТРЕБОВАНИЯ МОГУТ БЫТЬ ПРЕДСТАВЛЕНЫ:</h4>
+        <b>Требования могут быть представлены в виде: </b>
+        <ul>
+          <li>
+            Общая концепция (Vision) <br />
+            Проблемы концепции: <br />
+            не понятно, как это будет реализовано на практике – отображаться, в
+            точности функционировать опираясь на концепцию, разработчики могут
+            принимать совершенно разные решения, 1 фраза может подразумевать
+            очень большое количество функциональности, бизнес-определения часто
+            не понятны, для команды разработки
+          </li>
+          <li>
+            Варианты использования (Use cases) <br />
+            Проблемы вариантов использования: <br />
+            могут отсутствовать сценарии с альтернативным поведением, не все
+            возможные сценарии описаны, предлагаемое поведение не удобно для
+            пользователя, предлагаемое очень тяжело реализовать, противоречия
+            между разными процессами, использования непонятный GUI, точный
+            перечень функций не ясен
+          </li>
+          <li>Истории использования (User Stories)</li>
+          <li>Функциональные спецификации (Functional specs)</li>
+          <li>Технические изменения (Technical change)</li>
+          <li>
+            Готовое приложение <br />
+            старая работающая система (при миграции на новую платформу), продукт
+            конкурентов <br />
+            Проблемы готового приложения: <br />
+            нет уверенности, что мы определили все имеющиеся функции, поведение
+            которое мы видим – это баг или фича?, для чего нам нужна эта
+            функция?, какие входные данные для этой функции являются валидными,
+            а какие нет?
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-center">ПРОБЛЕМЫ СПЕЦИФИКАЦИЙ</h4>
+        <ul>
+          <li>противоречия между картинкой и текстом</li>
+          <li>противоречия между новой картинкой и старой</li>
+          <li>противоречия внутри одной картинки</li>
+          <li>
+            логика работы функции непонятна (кнопка есть, но непонятно для чего)
+          </li>
+          <li>
+            длинные спецификации, невозможно редактировать, отслеживать
+            изменения
+          </li>
+          <li>много страниц, трудно читать и работать с документом</li>
+        </ul>
+      </div>
+      <h4 class="text-center">НУЖНО ВЫЯСНИТЬ:</h4>
+      <ul class="list-group" class="list-group-item">
+        <li class="list-group-item">Где хранятся требования?</li>
+        <li class="list-group-item">Какие источники требований у нас есть?</li>
+        <li class="list-group-item">
+          Кто помещает требования в официальное хранилище?
+        </li>
+        <li class="list-group-item">
+          Как мы узнаем об изменениях в требованиях?
+        </li>
+        <li class="list-group-item">
+          Что более правильно – изначальные спецификации, последующие письма,
+          прототип?
+        </li>
+        <li class="list-group-item">
+          Кто утверждает окончательные требования?
+        </li>
+        <li class="list-group-item">Как найти новые/измененные требования?</li>
+        <li class="list-group-item">
+          Как мы можем предложить внести изменения в требования?
+        </li>
+        <li class="list-group-item">Кому мы можем задавать вопросы?</li>
+        <li class="list-group-item">
+          Кому и как мы должны сообщить о проблемах с требованиями?
+        </li>
+        <li class="list-group-item">
+          Если нам не отвечают, кого спрашивать следующим, кого в конечном
+          итоге?
+        </li>
+      </ul>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
