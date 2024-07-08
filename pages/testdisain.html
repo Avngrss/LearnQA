@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Техники тест дизайна</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">QA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/sobesedovanie.html"
+                >Собеседование</a
+              >
+            </li>
+            <div class="dropdown mt-1">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Тестирование(теория)
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="../pages/testingtypes.html"
+                    >Виды и методы тестирования</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/documentation.html"
+                    >Тестирование требований и документации</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="./testdisain.html"
+                >Техники тест дизайна</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Postman</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bash</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div>
+        <h2 class="text-center">#1 Классы эквивалентности</h2>
+        <img class="img-fluid" src="/img/maxresdefault.jpg" alt="" />
+        <img class="img-fluid" src="/img/ecvil.png" alt="" />
+        <p>
+          <b>Пример</b> <br />
+          У меня есть калькулятор инвестиций, который содержит поле процента
+          прибыли, которое мне необходимо указать. Разрешенные значения
+          находятся в диапазоне от 1 до 100 по требованию заказчика.
+        </p>
+        <b>Шаг 1: Определите эквивалентные классы:</b>
+        <ul>
+          <li>Положительные числа (1–100)</li>
+          <li>Отрицательные числа и ноль (<=0)</li>
+          <li>Больше допустимого (>100)</li>
+          <li>Буквы (a-z, a-Z, кириллица, арабский и т. д.)</li>
+          <li>Специальные символы (!@# и т. д.)</li>
+        </ul>
+        <b
+          >Шаг 2: Выберите одно значение для каждого класса. И у нас есть
+          следующие тест-кейсы для проверки: 50, -10, 146, aBc, !</b
+        >
+        <p>
+          Где использовать? Везде! При тестировании пользовательского интерфейса
+          (UI) - это поля, даты, конкретные кнопки. При тестировании API нам
+          нужно проверить все возможные параметры в теле запроса (body),
+          заголовках (headers), пути (path) или параметрах запроса (query
+          parameters).
+        </p>
+      </div>
+      <div>
+        <h2 class="text-center">#2 Граничные значения</h2>
+        <img class="img-fluid" src="/img/gran.png" alt="" />
+        <p>
+          Смысл этого подхода заключается в выборе значений на границах
+          эквивалентных классов с минимальным шагом.
+        </p>
+        <b>Пример:</b> <br />
+        Интернет-магазин предоставляет скидку 10%, если сумма покупки превышает
+        $100. <br />
+        <b>Шаг 1: Определите эквивалентные классы и границы каждого из них:</b>
+        <ul>
+          <li>Сумма покупки <= $100</li>
+          <li>Сумма покупки > $100</li>
+        </ul>
+        <b
+          >Шаг 2: Выберите значения, находящиеся на границе этих классов с
+          минимальным отклонением, а также само граничное значение:</b
+        >
+        <ul>
+          <li>Сумма покупки = $99.99: скидка не применяется</li>
+          <li>Сумма покупки = $100: скидка не применяется</li>
+          <li>Сумма покупки = $100.01: скидка применяется</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-center">#3 Причинно-следственный анализ</h2>
+        <img class="img-fluid" src="/img/sled.png" alt="" />
+        <p>
+          Каждое приложение ведет себя схоже — производит определённый отклик на
+          каждое действие пользователя. Этот подход заключается в систематизации
+          карты влияния на приложение. Знание того, какое условие должно
+          привести к какому-либо отклику, может помочь нам оптимизировать
+          количество тест-кейсов и обеспечить соответствующее покрытие.
+        </p>
+        <b>Пример:</b>
+        <p>
+          Как пользователь, я заполняю поля логина и пароля и нажимаю кнопку OK.
+          Я ожидаю, что мои данные пользователя будут сохранены в базе данных.
+          Это простой пример, чтобы помочь вам понять технику. Более сложные
+          случаи могут быть рассмотрены в будущем.
+        </p>
+        <ul>
+          <li>Шаг 1: Определите карту причин и откликов.</li>
+          <li>
+            Шаг 2: Создайте таблицу принятия решений на основе этой карты.
+          </li>
+        </ul>
+        <p>
+          <b>Где использовать?</b> <br />Эта техника может быть использована в
+          случаях, когда у нас есть неочевидные зависимости и сложные условия
+          для принятия решения. Она также может быть применена, когда наши
+          действия влияют на хранение данных или другие внешние сервисы. Стоит
+          отметить, что эта техника хорошо сочетается с диаграммами состояний и
+          последовательности.
+        </p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
