@@ -24,3 +24,6 @@ li {
 .no-mrg {
     margin-bottom: 5px;
 }
+.full {
+    height: 100vh;
+}
