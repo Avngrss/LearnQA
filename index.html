@@ -253,31 +253,39 @@
       <div>
         <h1 class="text-primary">Этапы тестирования</h1>
         <ul>
-          <ol>
-            Анализ продукта
-          </ol>
-          <ol>
-            Работа с требованиями
-          </ol>
-          <ol>
-            Разработка тест плана
-          </ol>
-          <ol>
-            Разработка тестестовой документации
-          </ol>
-          <ol>
-            Тестирование
-          </ol>
-          <ol>
-            Отчет о тестировании
-          </ol>
-          <ol>
-            Стабилизация
-          </ol>
-          <ol>
-            Эксплуатация
-          </ol>
+          <li>
+            <ol>
+              Анализ продукта
+            </ol>
+            <ol>
+              Работа с требованиями
+            </ol>
+            <ol>
+              Разработка тест плана
+            </ol>
+            <ol>
+              Разработка тестестовой документации
+            </ol>
+            <ol>
+              Тестирование
+            </ol>
+            <ol>
+              Отчет о тестировании
+            </ol>
+            <ol>
+              Стабилизация
+            </ol>
+            <ol>
+              Эксплуатация
+            </ol>
+          </li>
         </ul>
+      </div>
+      <div>
+        <h1 class="text-primary">Высокоуровневая документация</h1>
+        1. Тестовая Стратегия <br />
+        2. Тест-план <br />
+        3. Отчет о тестировании
       </div>
       <div>
         <h1 class="text-primary">План тестирования <i>(test plan)</i> –</h1>
@@ -382,6 +390,101 @@
         <p class="open-sans-text">
           Шкала измерений и метод, используемый для измерений [ISO 14598]
         </p>
+      </div>
+      <div>
+        <h1 class="text-primary">
+          Отчет о тестировании <i>(test result report)</i> –
+        </h1>
+        <p>
+          Отчет о тестировании - это документ результатах проведенной работы,
+          суммарную информацию о протестированных за подотчетный период билдах
+          информацию о деятельности тестировщиков, некоторые статистические
+          данные созданная с целью информирования заинтересованных лиц
+        </p>
+        <p><b>Цель создания отчета</b></p>
+        <p>
+          Предоставление лицам, заинтересованным в проекте, полной и объективной
+          информации о текущем состоянии проекта
+        </p>
+        <p><b>Почему так важен именно отчет тестировщиков? </b></p>
+        <p>
+          Тестировщики обладают более полной информацией о текущем состоянии
+          качества продукта
+        </p>
+        <h4 class="text-primary">
+          СТРУКТУРА ОТЧЕТА О РЕЗУЛЬТАТАХ ТЕСТИРОВАНИЯ
+        </h4>
+        <ul>
+          <h6>Команда тестирования (test team):</h6>
+          <img class="img-fluid" src="/img/trr/epicpen_9T0KayapIX.png" alt="" />
+          <h6>Описание процесса тестирования (test process description):</h6>
+          <li>Test environment: ОС Windows 10 build 1809</li>
+          <li>Browsers: Google Chrome v.71, MS Edge v.17134.</li>
+          <li>Test Level: System testing.</li>
+          <li>
+            Test types used: Functional, GUI, Localization and API testing.
+          </li>
+          <li>
+            All test scenarios where created based on customer requirements (see
+            WORTEX_SPEC.doc uploaded to project SharePoint folder) using
+            black-box testing techniques. All tests performed manually,
+            execution details see at: TestRail test plan and test statistic
+            sections of this document.
+          </li>
+          <h6>Краткое описание (summary):</h6>
+          <img class="img-fluid" src="/img/trr/epicpen_lCOwUUBNuo.png" alt="" />
+          <hr />
+          <p>
+            <b>News:</b> Google Chrome Browser v.73 is planned on next Monday,
+            so an additional regression cycle is planned.
+          </p>
+          <p><b>Test Status</b>: Green</p>
+          <p>
+            <b>Test Analysis</b>: Although there are 35 bugs found this week, it
+            seems as expected at the current stage of the project, as this build
+            a lot of new functionality was added.
+          </p>
+          <p>
+            <b>Plans for next week</b>: complete test cases creation, receive
+            build 1.0.1, start test execution
+          </p>
+          <p>
+            <b>Problems:</b> Test server is down for 2 days and HelpDesk did not
+            reply on our request to restore it yet.
+          </p>
+          <hr />
+          <p>For the reporting week tasks done:</p>
+          <li>User Stories analysis – 6</li>
+          <li>Created general checklist for 81 idea</li>
+          <li>Test-cases writing (45 out of 81):</li>
+          <p>
+            Plans for next week: complete test cases creation, receive build
+            1.0.1, start test execution.
+          </p>
+          <h6>Расписание (testing timetable):</h6>
+          <img class="img-fluid" src="/img/trr/epicpen_jbyZL6fSbO.png" alt="" />
+          <h6>Рекомендации (recommendations):</h6>
+          <p>
+            Due to the fact that 80% of issues found related to math operations,
+            I would recommend to focus on corrections for basic functionality
+            first and only then proceed with new features development.
+            Рекомендуется уделить особое внимание регрессионному тестированию в
+            связи с резким возрастанием количества багов в ранее реализованной и
+            протестированной функциональности.
+          </p>
+          <h6>Список новых ошибок (new bugs found):</h6>
+          <img class="img-fluid" src="/img/trr/epicpen_CmVR8vv7xh.png" alt="" />
+          <h6>Статистика по всем ошибкам (all bugs found):</h6>
+          <img class="img-fluid" src="/img/trr/epicpen_imADtHjSAe.png" alt="" />
+        </ul>
+        <h5>ОТЧЕТ О РЕЗУЛЬТАТАХ ТЕСТИРОВАНИЯ ИСПОЛЬЗУЮТ:</h5>
+        <ul>
+          <li>Project manager</li>
+          <li>Dev lead</li>
+          <li>Test lead</li>
+          <li>Customer</li>
+        </ul>
+        <img class="img-fluid" src="/img/trr/epicpen_PEUaQ2XGJD.png" alt="" />
       </div>
       <div>
         <h1 class="text-primary">Тест дизайн <i>(Test disayn)</i> –</h1>
