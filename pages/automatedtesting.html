@@ -17,79 +17,109 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { animation: fadeIn 1s ease; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
+      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
+      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">QA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sobesedovanie.html"
-                >Мобильное тестирование</a
-              >
-            </li>
-            <div class="dropdown mt-1">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Тестирование(теория)
-              </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="../pages/testingtypes.html"
-                    >Виды и методы тестирования</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/documentation.html"
-                    >Тестирование требований и документации</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="./testdisain.html"
-                >Техники тест дизайна</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sql.html">SQL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./automatedtesting.html"
-                >Автоматизированное тестирование</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bash</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Автоматизация</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-robot"></i> Что такое автоматизированное тестирование?</div>
+        <div class="accent-block mb-3">
+          <b>Автоматизированное тестирование</b> — это использование программных инструментов для автоматической проверки работы приложения. Позволяет ускорить тестирование, повысить качество и снизить влияние человеческого фактора.
+        </div>
+        <ul class="icon-list">
+          <li><i class="bi bi-lightning-charge"></i> Быстрое выполнение повторяющихся тестов</li>
+          <li><i class="bi bi-database-check"></i> Проверка большого объёма данных</li>
+          <li><i class="bi bi-arrow-repeat"></i> Интеграция с CI/CD</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-terminal"></i> Пример автотеста</div>
+        <div class="code-block mb-2">
+          Тест: Проверка успешного входа в систему
+          Открыть страницу входа
+          Ввести логин и пароль
+          Нажать "Войти"
+          Ожидаемый результат: Пользователь попадает на главную страницу
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-lightbulb"></i> Советы по автоматизации</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-check2-circle"></i> Автоматизируйте рутинные и часто повторяющиеся проверки</li>
+          <li><i class="bi bi-diagram-3"></i> Используйте Page Object для UI-тестов</li>
+          <li><i class="bi bi-git"></i> Интегрируйте автотесты в CI/CD</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-tools"></i> Инструменты для автоматизации</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-browser-chrome"></i> <b>Selenium, Cypress</b> — автоматизация UI</li>
+          <li><i class="bi bi-plug"></i> <b>Postman</b> — автоматизация API-тестов</li>
+          <li><i class="bi bi-gear"></i> <b>Jenkins, GitHub Actions</b> — CI/CD</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-journal-text"></i> Глоссарий терминов</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-arrow-repeat"></i> <b>CI/CD</b> — непрерывная интеграция и доставка</li>
+          <li><i class="bi bi-window"></i> <b>Page Object</b> — паттерн для UI-автотестов</li>
+          <li><i class="bi bi-box"></i> <b>Фреймворк</b> — набор инструментов для автотестов</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://selenium.dev/" target="_blank">Selenium</a> — автоматизация браузера</li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://cypress.io/" target="_blank">Cypress</a> — современный фреймворк для автотестов</li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://habr.com/ru/" target="_blank">Habr</a> — статьи по автоматизации</li>
+        </ul>
+      </section>
       <div>
         <h1 class="mt-2">Автоматизированное тестирование</h1>
         <p>

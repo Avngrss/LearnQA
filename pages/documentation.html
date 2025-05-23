@@ -17,79 +17,111 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
+      .fade-in.delay-1 { animation-delay: 0.2s; }
+      .fade-in.delay-2 { animation-delay: 0.4s; }
+      .fade-in.delay-3 { animation-delay: 0.6s; }
+      .fade-in.delay-4 { animation-delay: 0.8s; }
+      .fade-in.delay-5 { animation-delay: 1s; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
+      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
+      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">QA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sobesedovanie.html"
-                >Мобильное тестирование</a
-              >
-            </li>
-            <div class="dropdown mt-1">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Тестирование(теория)
-              </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="../pages/testingtypes.html"
-                    >Виды и методы тестирования</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/documentation.html"
-                    >Тестирование требований и документации</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/testdisain.html"
-                >Техники тест дизайна</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sql.html">SQL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/automatedtesting.html"
-                >Автоматизированное тестирование</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bash</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Документация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Что такое тестирование требований и документации?</div>
+        <div class="accent-desc">
+          <b>Тестирование требований</b> — это анализ и проверка полноты, корректности и реализуемости требований к продукту. Качественная документация — залог успешного тестирования и разработки.
+        </div>
+        <ul class="accent-list">
+          <li>Проверка полноты и непротиворечивости требований</li>
+          <li>Анализ реализуемости и тестируемости</li>
+          <li>Работа с различными видами документации</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Пример требования</div>
+        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
+          <b>Требование:</b> Система должна позволять пользователю восстановить пароль через email<br>
+          <b>Критерии приёмки:</b> Пользователь получает письмо с ссылкой для сброса пароля
+        </div>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Советы по работе с документацией</div>
+        <ul class="accent-list">
+          <li>Задавайте уточняющие вопросы</li>
+          <li>Используйте чек-листы для проверки требований</li>
+          <li>Документируйте все изменения</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Инструменты для анализа требований</div>
+        <ul class="accent-list">
+          <li><b>Confluence</b> — ведение документации</li>
+          <li><b>Jira</b> — управление требованиями и задачами</li>
+          <li><b>Draw.io</b> — визуализация процессов</li>
+        </ul>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Глоссарий терминов</div>
+        <ul class="accent-list">
+          <li><b>Требование</b> — описание того, что должно быть реализовано</li>
+          <li><b>Критерий приёмки</b> — условие, при котором требование считается выполненным</li>
+          <li><b>Документация</b> — совокупность всех описаний продукта</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://confluence.atlassian.com/" target="_blank">Atlassian Confluence Docs</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://iso25000.com/index.php/en/iso-25000-standards/iso-25010" target="_blank">ISO/IEC 25010 Standard</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.incose.org/products-and-publications/se-handbook" target="_blank">INCOSE SE Handbook (Requirements Engineering)</a></li>
+        </ul>
+      </section>
       <div>
         <p>
           <i class="text-info">Требование (requirement)</i> - Требование — это
@@ -346,7 +378,7 @@
             нет – задайте дополнительные вопросы (иногда нужно 5+ циклов
             вопрос/ответ, чтобы решить проблему)
           </li>
-          <li>документируйте/сохраняйте ответы.</li>
+          <li class="list-group-item">документируйте/сохраняйте ответы.</li>
         </ul>
         <p>
           <i class="text-info">Тест кейсы </i>

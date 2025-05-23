@@ -4,92 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
+      .fade-in.delay-1 { animation-delay: 0.2s; }
+      .fade-in.delay-2 { animation-delay: 0.4s; }
+      .fade-in.delay-3 { animation-delay: 0.6s; }
+      .fade-in.delay-4 { animation-delay: 0.8s; }
+      .fade-in.delay-5 { animation-delay: 1s; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
+      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
+      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+    </style>
   </head>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-    rel="stylesheet"
-  />
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">QA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sobesedovanie.html"
-                >Мобильное тестирование</a
-              >
-            </li>
-            <div class="dropdown mt-1">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Тестирование(теория)
-              </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="../pages/testingtypes.html"
-                    >Виды и методы тестирования</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/documentation.html"
-                    >Тестирование требований и документации</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/testdisain.html"
-                >Техники тест дизайна</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sql.html">SQL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/automatedtesting.html"
-                >Автоматизированное тестирование</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bash</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container mt-2">
+    <div class="container">
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Что такое мобильное тестирование?</div>
+        <div class="accent-desc">
+          <b>Мобильное тестирование</b> — это проверка качества мобильных приложений на разных устройствах, ОС и версиях. Важно учитывать особенности платформ, взаимодействие с аппаратурой, производительность и безопасность.
+        </div>
+        <ul class="accent-list">
+          <li>Проверка интерфейса и юзабилити</li>
+          <li>Тестирование производительности и энергопотребления</li>
+          <li>Проверка работы с сетью и офлайн-режимов</li>
+          <li>Тестирование безопасности и разрешений</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Пример тест-кейса</div>
+        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
+          <b>Название:</b> Проверка push-уведомлений<br>
+          <b>Шаги:</b> Отправить push-уведомление, разблокировать устройство<br>
+          <b>Ожидаемый результат:</b> Уведомление отображается корректно
+        </div>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Советы по тестированию мобильных приложений</div>
+        <ul class="accent-list">
+          <li>Тестируйте на разных устройствах и версиях ОС</li>
+          <li>Проверяйте работу при плохом интернете</li>
+          <li>Используйте эмуляторы и реальные устройства</li>
+          <li>Проверяйте энергопотребление и работу в фоне</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Инструменты для мобильного тестирования</div>
+        <ul class="accent-list">
+          <li><b>Appium</b> — автоматизация мобильных тестов</li>
+          <li><b>Firebase Test Lab</b> — облачное тестирование</li>
+          <li><b>Charles, Fiddler</b> — анализ сетевого трафика</li>
+        </ul>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Глоссарий терминов</div>
+        <ul class="accent-list">
+          <li><b>APK</b> — файл установки Android-приложения</li>
+          <li><b>IPA</b> — файл установки iOS-приложения</li>
+          <li><b>Push-уведомление</b> — сообщение, отправляемое приложением</li>
+          <li><b>UI</b> — пользовательский интерфейс</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://developer.android.com/guide" target="_blank">Android Developer Guide</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://developer.apple.com/design/human-interface-guidelines/" target="_blank">Apple Human Interface Guidelines</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://m3.material.io/" target="_blank">Material Design 3 (Google)</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://developer.apple.com/documentation/" target="_blank">Apple Developer Docs</a></li>
+        </ul>
+      </section>
       <div>
         <h2>Мобильное тестирование</h2>
         <p>Виды мобильных приложений</p>

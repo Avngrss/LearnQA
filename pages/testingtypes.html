@@ -1,576 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Виды и методы тестирования</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
+      .fade-in.delay-1 { animation-delay: 0.2s; }
+      .fade-in.delay-2 { animation-delay: 0.4s; }
+      .fade-in.delay-3 { animation-delay: 0.6s; }
+      .fade-in.delay-4 { animation-delay: 0.8s; }
+      .fade-in.delay-5 { animation-delay: 1s; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(108,63,197,0.13);
+        margin: 24px auto 32px auto;
+        display: block;
+      }
+      .accent-title {
+        color: #3a2e6c;
+        font-weight: 700;
+        margin-bottom: 18px;
+        font-size: 2rem;
+      }
+      .accent-list li {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: #3a8dde;
+        font-weight: 600;
+      }
+      .accent-desc {
+        color: #444;
+        font-size: 1.08rem;
+        margin-bottom: 12px;
+      }
+      .type-block {
+        background: #f3f6fa;
+        border-left: 6px solid #6c3fc5;
+        border-radius: 10px;
+        padding: 18px 20px;
+        margin-bottom: 18px;
+      }
+      @media (max-width: 700px) {
+        .section-block { padding: 16px 6px; }
+        .accent-title { font-size: 1.2rem; }
+        .big-img { max-width: 98vw; }
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">QA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sobesedovanie.html"
-                >Мобильное тестирование</a
-              >
-            </li>
-            <div class="dropdown mt-1">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Тестирование(теория)
-              </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="../pages/testingtypes.html"
-                    >Виды и методы тестирования</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/documentation.html"
-                    >Тестирование требований и документации</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/testdisain.html"
-                >Техники тест дизайна</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sql.html">SQL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/automatedtesting.html"
-                >Автоматизированное тестирование</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bash</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
-      <img
-        class="img-fluid"
-        src="../img/types-of-testing-russian-2-min.png"
-        alt=""
-      />
-      <h1 class="text-center">УРОВНИ ТЕСТИРОВАНИЯ</h1>
-      <p>
-        Единой классификации не существует, и две категории имеют в обиходе
-        профессионалов похожие названия: <br />
-        <b>Уровни тестирования</b> (по степени детализации приложения) =
-        <b> компонентное, интеграционное, системное.</b> <br />
-        <b>Уровни функционального тестирования </b>(по важности функций) =
-        <b> smoke, critical path, extended.</b>
-      </p>
-      <img class="img-fluid" src="../img/7eznUvetQ1U.jpg" alt="" />
-      <h2 class="text-center head-color">
-        1.По степени детализации приложения
-      </h2>
-      <div>
-        <img class="img-fluid" src="/img/integration.png" alt="" />
-        <ul>
-          <li class="text-primary">КОМПОНЕНТНОЕ ТЕСТИРОВАНИЕ</li>
-          <p>
-            <i class="text-info"
-              >(Component Testing/Unit testing/ Module testing )</i
-            >
-            - тестирование отдельных компонентов программного обеспечения
-          </p>
-          <li class="text-primary">ИНТЕГРАЦИОННОЕ ТЕСТИРОВАНИЕ</li>
-          <p>
-            <i class="text-info">(integration testing) </i>
-            – проверка взаимодействия модулей. Тестирование части системы,
-            состоящей из двух и более частей. Основная задача – поиск дефектов,
-            связанных с ошибками в реализации и интерпретации взаимодействия
-            между модулями.
-          </p>
-          <p>
-            Могут быть применены Заглушки (stab) и драйверы (driver) для
-            эмуляции недостающих компонентов. Может понадобиться специально
-            написать их для тестируемой системы (SUT).
-          </p>
-          <p>
-            Тестирование интеграции компонентов
-            <i class="text-info">(component integration testing)</i>:
-            тестирование, взаимодействия между несколькими интегрированными
-            компонентами одного приложения
-          </p>
-          <p>
-            Системное интеграционное тестирование
-            <i class="text-info">(system integration testing)</i>: тестирование,
-            взаимодействия между всеми компонентами системы, между различными
-            приложениями объединенными в систему, интерфейсами связи с внешними
-            системами (интернет и т.д.).
-          </p>
-          <li class="text-primary">СИСТЕМНОЕ ТЕСТИРОВАНИЕ</li>
-          <p class="">
-            <i class="text-info"> (system testing) </i>
-            – полная проверка приложения, процесс тестирования системы в целом с
-            целью проверки того, что она соответствует установленным требованиям
-          </p>
-          <p class="no-mrg">ТЕСТИРОВАНИЕ ПОЛНОЙ СИСТЕМЫ</p>
-          <ul>
-            <li>
-              может быть последним шагом в интеграционном тестировании в узком
-              смысле
-            </li>
-            <li>
-              может быть первый раз, когда из компонентов появляется рабочая
-              система
-            </li>
-          </ul>
-          <li class="text-primary">ПРИЕМОЧНОЕ ТЕСТИРОВАНИЕ</li>
-          <p>
-            <i class="text-info"> (acceptance testing) </i>
-            тестирование по отношению к потребностям и требованиям пользователя,
-            проводимое с целью дать возможность пользователям, заказчикам
-            определить, принимать систему или нет. Как правило заключительный
-            этап тестирования, осуществляемый перед передачей продукта заказчику
-            и/или конечным пользователям.
-          </p>
-          <p><u>Типичные формы приемочного тестирования:</u></p>
-          <ul>
-            <li>Приёмочное пользовательское тестирование</li>
-            <li>Бизнес-приёмочное тестирование</li>
-            <li>Альфа-тестирование</li>
-            <li>Бета-тестирование</li>
-          </ul>
-          <div class="text-center">
-            <img class="img-fluid" src="/img/accepttesting.png" alt="" />
+      <header class="mb-5 text-center">
+        <h1>Виды и методы тестирования</h1>
+        <p class="lead">Краткое и наглядное руководство по основным уровням, видам и подходам к тестированию ПО.</p>
+      </header>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Что такое тестирование?</div>
+        <div class="accent-desc">
+          <b>Тестирование</b> — это процесс проверки качества программного обеспечения с целью выявления дефектов и несоответствий требованиям. Виды тестирования помогают охватить разные аспекты работы продукта: функциональность, производительность, безопасность, удобство и др.
+        </div>
+        <ul class="accent-list">
+          <li>Проверка работы функций и сценариев</li>
+          <li>Оценка производительности и устойчивости</li>
+          <li>Проверка безопасности и защиты данных</li>
+          <li>Тестирование совместимости и доступности</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Пример тест-кейса</div>
+        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
+          <b>Название:</b> Проверка авторизации с валидными данными<br>
+          <b>Шаги:</b> Ввести корректный логин и пароль, нажать "Войти"<br>
+          <b>Ожидаемый результат:</b> Пользователь успешно авторизован и попадает на главную страницу
+        </div>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Подходы и техники тестирования</div>
+        <ul class="accent-list">
+          <li>White-box, black-box, grey-box</li>
+          <li>Эквивалентное разбиение, граничные значения, попарное тестирование</li>
+          <li>Тестирование по сценариям, exploratory testing</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Инструменты для тестирования</div>
+        <ul class="accent-list">
+          <li><b>TestRail, Qase</b> — управление тест-кейсами</li>
+          <li><b>Jira</b> — отслеживание багов</li>
+          <li><b>Postman</b> — тестирование API</li>
+          <li><b>Selenium, Cypress</b> — автоматизация тестов</li>
+        </ul>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Советы по выбору видов тестирования</div>
+        <ul class="accent-list">
+          <li>Ориентируйтесь на риски и критичность функций</li>
+          <li>Используйте разные виды тестирования для комплексной проверки</li>
+          <li>Не забывайте о нефункциональных аспектах (производительность, безопасность)</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Глоссарий терминов</div>
+        <ul class="accent-list">
+          <li><b>Smoke-тестирование</b> — базовая проверка работоспособности</li>
+          <li><b>Регрессия</b> — проверка, что изменения не сломали старое</li>
+          <li><b>Тест-кейс</b> — сценарий проверки</li>
+          <li><b>Дефект</b> — найденная ошибка</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.istqb.org/" target="_blank">ISTQB Foundation</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.iso.org/standard/35710.html" target="_blank">ISO/IEC/IEEE 29119 Software Testing</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://softwaretestingfundamentals.com/" target="_blank">Software Testing Fundamentals</a></li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <img class="big-img" src="../img/types-of-testing-russian-2-min.png" alt="Виды тестирования" />
+        <div class="accent-title">Уровни тестирования</div>
+        <ul class="accent-list">
+          <li>Компонентное</li>
+          <li>Интеграционное</li>
+          <li>Системное</li>
+          <li>Приёмочное</li>
+        </ul>
+        <div class="accent-desc">
+          Нет единой классификации, но выделяют <b>уровни тестирования</b> (по детализации: компонентное, интеграционное, системное, приёмочное) и <b>уровни функционального тестирования</b> (по важности функций: smoke, critical path, extended).
+        </div>
+        <img class="big-img" src="../img/7eznUvetQ1U.jpg" alt="Схема уровней тестирования" />
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Описание уровней</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block mb-3">
+              <b>Компонентное тестирование</b> — проверка отдельных компонентов/модулей ПО.
+            </div>
+            <div class="type-block mb-3">
+              <b>Интеграционное тестирование</b> — проверка взаимодействия между модулями и компонентами.
+            </div>
+            <div class="type-block mb-3">
+              <b>Системное тестирование</b> — проверка всей системы на соответствие требованиям.
+            </div>
+            <div class="type-block mb-3">
+              <b>Приёмочное тестирование</b> — проверка системы с точки зрения пользователя/заказчика.
+            </div>
           </div>
-        </ul>
-        <p>
-          Уровни тестирования (модульное, интеграционное, системное, приёмочное)
-          определяют на каком уровне системы проводится тестирование, то есть
-          какие её части или стадии разработки проверяются.
-        </p>
-        <p>
-          Типы тестирования (функциональное, регрессионное, нагрузочное и т. д.)
-          описывают, как и что именно тестируется, то есть методику или подход к
-          проверке.
-        </p>
-        <p>
-          Таким образом, уровни тестирования фокусируются на том, на каком
-          уровне системы проводится тест, а типы тестирования — на том, что
-          конкретно проверяется и как. Например, системное тестирование может
-          включать как функциональное, так и нефункциональное тестирование, а
-          модульное тестирование будет, скорее всего, ориентировано на проверку
-          отдельных функций или классов.
-        </p>
-        <h4>Как эти уровни тестирования помогают в процессе разработки</h4>
-        <ul>
-          <li>
-            Обнаружение ошибок на ранних этапах: Модульное тестирование
-            позволяет ловить дефекты на самом раннем этапе разработки, что
-            значительно снижает стоимость исправления ошибок. Интеграционное
-            тестирование помогает убедиться, что компоненты, собравшиеся в
-            систему, взаимодействуют должным образом.
-          </li>
-          <li>
-            Повышение качества: Системное тестирование и приёмочное тестирование
-            дают уверенность в том, что система в целом работает так, как
-            ожидалось, и соответствует всем требованиям. Это снижает риски при
-            переходе к этапу эксплуатации.
-          </li>
-          <li>
-            Обеспечение надежности: Каждый уровень тестирования фокусируется на
-            разных аспектах системы — от отдельных функций до взаимодействия
-            между модулями и работы всей системы. Это помогает в конечном итоге
-            создать более надёжный и устойчивый продукт.
-          </li>
-          <li>
-            Снижение стоимости исправлений: Обнаружение дефектов на более ранних
-            стадиях разработки помогает избежать дорогостоящих исправлений на
-            более поздних этапах, когда изменения могут повлиять на другие части
-            системы.
-          </li>
-        </ul>
-      </div>
-      <h1 class="text-center">ВИДЫ ТЕСТИРОВАНИЯ</h1>
-      <h2 class="text-center head-color">
-        Виды/направления тестирования по целям и задачам
-      </h2>
-      <div>
-        <p>
-          <b>ФУНКЦИОНАЛЬНОЕ</b> <i class="text-info">(functional testing)</i>:
-          тестирование, основанное на анализе функциональности компонента или
-          системы.
-        </p>
-        <p>
-          <b>НЕФУНКЦИОНАЛЬНОЕ</b>
-          <i class="text-info">(non-functional testing)</i>: тестирование
-          атрибутов компонента или системы, не относящихся к функциональности,
-          то есть: надежность, внешний вид, практичность,устойчивость..
-        </p>
-        <p>
-          <b>Инсталляционное тестирование </b
-          ><i class="text-info"
-            >(installation testing, installability testing)</i
-          >
-          — тестирование, направленное на выявление дефектов, влияющих на
-          протекание стадии инсталляции (уста- новки) приложения.
-        </p>
-        <p>
-          <b>Конфигурационное тестирование </b>
-          <i class="text-info">(Configuration Testing)</i> — вид тестирования,
-          направленный на проверку работы программного обеспечения при различных
-          конфигурациях системы (заявленных платформах, поддерживаемых
-          драйверах, при различных конфигурациях компьютеров и т.д.)
-        </p>
-        <p>
-          <b>Тестирование совместимости</b>
-          <i class="text-info">(compatibility testing)</i> — тестирование,
-          направленное на проверку способности приложения работать в указанном
-          окружени
-        </p>
-        <ul>
-          <li>кросс-платформенное тестирование</li>
-          <li>кросс-браузерное тестирование</li>
-          <li>мобильное тестирование</li>
-        </ul>
-        <p>
-          <b>Тестирование графического интерфейса</b>
-          <i class="text-info">(GUI testing)</i> – анализ соответствия
-          графического пользовательского интерфейса программы спецификациям.
-        </p>
-        <p>
-          <b>Тестирование удобства использования </b>
-          <i class="text-info">(usability testing) </i> — тестирование,
-          направленное на исследование того, насколько конечному пользователю
-          понятно, как работать с продуктом, а также на то, насколько ему
-          нравится использовать продукт
-        </p>
-        <p>
-          <b>Тестирование интернационализации </b>
-          <i class="text-info">(internationalization testing, i18n) </i> —
-          тестирование, направленное на проверку готовности продукта к работе с
-          использованием различных языков и с учётом различных национальных и
-          культурных особенностей.
-        </p>
-        <p>
-          <b>Тестирование локализации </b>
-          <i class="text-info">(localization testing, l10n)</i> — тестирование,
-          направленное на проверку корректности и качества адаптации продукта к
-          использованию на том или ином языке с учётом национальных и культурных
-          особенностей.
-        </p>
-        <p>
-          <b>Тестирование безопасности </b>
-          <i class="text-info">(security testing) </i> — тестирование с целью
-          оценить защищенность программного продукта.
-        </p>
-        <p>
-          <b>Тестирование доступности </b>
-          <i class="text-info">(accessibility testing) </i> — тестирование,
-          направленное на исследование пригодности продукта к использованию
-          людьми с ограниченными возможностями (слабым зрением и т.д.)
-        </p>
-        <p>
-          <b>Тестирование производительности </b>
-          <i class="text-info">(performance test) </i> — тест, проводимый с
-          целью оценить поведение системы под нагрузкой
-        </p>
-        <p>
-          <b>Нагрузочное тестирование </b>
-          <i class="text-info">(load testing) </i> — исследование способности
-          приложения сохранять заданные показатели качества при нагрузке в
-          допустимых пределах и некотором превышении этих пределов (определение
-          «запаса прочности»)
-        </p>
-        <p>
-          <b>Стресс тестирование </b>
-          <i class="text-info">(stress testing) </i> — исследование поведения
-          приложения при нештатных изменениях нагрузки, значительно превышающих
-          расчётный уровень, или в ситуациях недоступности значительной части
-          необходимых приложению ресурсов
-        </p>
-      </div>
-      <h2 class="text-center head-color">По «тестированию изменений»</h2>
-      <div>
-        <p>
-          <b>Тестирование нового функционала </b>
-          <i class="text-info">(new feature testing) </i>
-        </p>
-        <p>
-          <b>Повторное тестирование </b>
-          <i class="text-info">(re-testing, confirmation testing) </i> —
-          выполнение тест-кейсов, которые ранее обнаружили дефекты, с целью
-          подтверждения устранения дефектов
-        </p>
-        <p>
-          <b>Регрессионное тестирование </b>
-          <i class="text-info">(regression testing) </i> — тестирование,
-          направленное на проверку того факта, что в ранее работоспособной
-          функциональности не появились ошибки, вызванные изменениями в
-          приложении или среде его функционирования
-        </p>
-        <ul>
-          <li>Регрессия багов</li>
-          <li>Регрессия старых изменений</li>
-          <li>Регрессия основного функционала</li>
-        </ul>
-      </div>
-      <h2 class="text-center head-color">
-        Типы тестирования в зависимости от фазы разработки
-      </h2>
-      <div>
-        <p>
-          <b>Тестирование разработки </b>
-          <i class="text-info">(development testing) </i> — тестирование,
-          проводимое во время разработки системы, обычно в рабочей среде
-          разработчиков. Основная цель – вызвать максимально возможное
-          количество отказов, чтобы они были обнаружены и исправлены.
-        </p>
-        <p>
-          <b>Приёмочное тестирование </b>
-          <i class="text-info">(acceptance testing) </i> — тестирование по
-          отношению к потребностям пользователя или заказчика. Основная цель –
-          подтвердить, что система работает, как ожидается, чтобы решить
-          принимать или нет.
-        </p>
-        <p>
-          <b>Тестирование в период сопровождения </b>
-          <i class="text-info">(maintenance testing) </i> — тестирование
-          изменений в действующей системе или влияния изменений в окружении на
-          действующую систему. Основная цель – проверить, что при разработке
-          изменений не было произведено новых дефектов.
-        </p>
-        <ul>
-          <li>
-            <b class="text-info">Изменение</b> программных продуктов. Включает
-            запланированные улучшения, поправки и аварийные изменения, изменения
-            окружения (обновление БД, патчи для уязвимостей ОС)
-          </li>
-          <li>
-            <b class="text-info">Миграция</b> программных продуктов (из одной
-            программы в другую)
-          </li>
-          <li>
-            <b class="text-info">Вывод</b> из эксплуатации ПО или систем. Может
-            включать тестирование миграции данных или архивирования (если
-            требуется длительное хранение данных)
-          </li>
-          <li>
-            <b class="text-info"
-              >Регрессионное тестирование для частей системы</b
-            >
-            которые подверглись изменениям
-          </li>
-          <h6>Особенности</h6>
-          <ul>
-            <li>изменения в приложении - как правило незначительные</li>
-            <li>
-              система должна быть протестирована быстро и эффективно, так как:
-              ранняя остановка тестирования – ошибки могут быть пропущены
-              затянутое тестирование – упущенные возможности бизнеса
-            </li>
-            <li>
-              эти системы могут быть установлены и работать годами: жизненно
-              важные для бизнеса могут быть в использовании 24/7
-            </li>
-          </ul>
-          <h6>Основные сложности для тестировщика:</h6>
-          <ul>
-            <li>отсутствие документации/требований к приложению</li>
-            <li>старая/не актуальная документация</li>
-          </ul>
-          <h6>Выход</h6>
-          <ul>
-            <li>уже имеющаяся система (для эталонного тестирования)</li>
-            <li>руководство пользователя</li>
-            <li>профессиональные знания специалиста</li>
-          </ul>
-        </ul>
-      </div>
-      <h2 class="text-center head-color">
-        По степени важности тестируемых функций и приоритету выполнения тестов
-      </h2>
-      <div>
-        <h4>ПРИОРИТЕТ ВЫПОЛНЕНИЯ</h4>
-        <p>
-          <b>Дымовое тестирование </b>
-          <i class="text-info">(smoke test) </i> — направлено на проверку самой
-          главной, важной, ключевой функциональности, неработоспособность
-          которой делает бессмысленной саму идею использования приложения
-        </p>
-        <p>
-          <b>Тестирование критического пути </b>
-          <i class="text-info">(critical path test) </i> — направлено на
-          исследование функциональности, используемой типичными пользователями в
-          типичной повседневной дея- тельности
-        </p>
-        <p>
-          <b>Расширенное тестирование </b>
-          <i class="text-info">(extended test) </i> — направлено на исследование
-          всей заявленной в требованиях функциональности — даже той, которая
-          низко проранжирована по степени важности
-        </p>
-      </div>
-      <h2 class="text-center head-color">По принципу работы с приложением</h2>
-      <div>
-        <p>
-          <b>Позитивное тестирование </b>
-          <i class="text-info">(positive testing) </i> — направлено на
-          исследование приложения в ситуации, когда все действия выполняются
-          строго по инструкции без каких бы то ни было ошибок, отклонений, ввода
-          неверных данных и т.д.
-        </p>
-        <p>
-          <b>Негативное тестирование </b>
-          <i class="text-info">(negative testing) </i> — направлено на
-          исследование работы приложения в ситуациях, когда с ним выполняются
-          (некорректные) операции и/или используются данные, потенциально
-          приводящие к ошибкам (деление на ноль)
-        </p>
-      </div>
-      <h2 class="text-center head-color">По запуску кода на исполнение</h2>
-      <div>
-        <p>
-          <b>Статическое тестирование </b>
-          <i class="text-info">(static testing) </i> — тестирование без запуска
-          кода на исполнение.
-        </p>
-        <p>
-          <b>Динамическое тестирование </b>
-          <i class="text-info">(dynamic testing) </i> — тестирование с запуском
-          кода на исполнение.
-        </p>
-      </div>
-      <h2 class="text-center head-color">По доступу к коду</h2>
-      <div>
-        <p>
-          <b>Метод белого ящика </b>
-          <i class="text-info">(white box testing) </i> — у тестировщика есть
-          доступ к внутренней структуре и коду приложения
-        </p>
-        <p>
-          <b>Метод чёрного ящика </b>
-          <i class="text-info">(black box testing) </i> — у тестировщика либо
-          нет доступа к внутренней структуре и коду приложения, либо
-          недостаточно знаний для их понимания, либо он не обращается к ним в
-          процессе тестирования
-        </p>
-        <p>
-          <b>Метод серого ящика </b>
-          <i class="text-info">(gray box testing) </i> — комбинация методов
-          белого ящика и чёрного ящика, состоящая в том, что к части кода и
-          архитектуры у тестировщика доступ есть, а к части — нет
-        </p>
-      </div>
-      <h2 class="text-center head-color">По уровню формализации</h2>
-      <div>
-        <p>
-          <b>На основе тест-кейсов </b>
-          <i class="text-info">(scripted testing, test case based testing) </i>
-          тестирование производится на основе заранее подготовленных тест-кейсов
-        </p>
-        <p>
-          <b>На основе чек-листов </b>
-          <i class="text-info">(checklist-based testing) </i>
-          тестирование производится на основе чек-листов.
-        </p>
-        <p>
-          <b>Исследовательское тестирование </b>
-          <i class="text-info">(exploratory testing) </i>
-          это одновременное изучение программного продукта, проектирование
-          тестов и их исполнение. и использует полученную во время тестирования
-          информацию для проектирования новых и улучшенных тестов.
-        </p>
-        <p>
-          <b>Свободное (интуитивное) тестирование </b>
-          <i class="text-info">(ad hoc testing) </i>
-          ни тест-кейсов, ни чек-листов, ни сценариев, полностью опираемся на
-          свой профессионализм и интуицию. тестирование, выполняемое
-          неформально: без формальной подготовки тестов, формальных методов
-          проектирования тестов, определения ожидаемых результатов и руководства
-          по выполнению тестирования.
-        </p>
-        <p>
-          <b>Хаотическое тестирование </b>
-          <i class="text-info">(monkey testing) </i>
-          тестирование случайным выбором из большого диапазона входов, случайным
-          нажатием кнопок, без соотнесения с тем, как в реальности будет
-          использоваться система.
-        </p>
-      </div>
-      <div>
-        <h1>
-          Когда нужно проводить смоук тестирование а когда нужно проводить
-          регрессионное тестирование?
-        </h1>
-        <p>
-          Смоук тестирование (или "тестирование на дым") — это базовый уровень
-          тестирования, направленный на проверку критических функций системы,
-          чтобы убедиться, что они работают, прежде чем проводить более глубокие
-          тесты. Это тестирование выполняется для быстрой проверки
-          жизнеспособности новой сборки или обновления.
-        </p>
-        <ul>
-          <li>После Разработки Новых Функций:</li>
-          <li>После Развертывания Обновлений или Патчей:</li>
-          <li>При Выпуске Новой Сборки:</li>
-          <li>После Переноса или Миграции:</li>
-        </ul>
-        <p>
-          Регрессионное тестирование направлено на проверку того, что новые
-          изменения в коде (например, исправления ошибок, добавление новых
-          функций) не нарушили существующую функциональность. Оно помогает
-          убедиться, что изменения не вызвали нежелательных побочных эффектов в
-          других частях системы.
-        </p>
-        <ul>
-          <li>После Добавления Новых Функций:</li>
-          <li>После Исправления Ошибок:</li>
-          <li>При Выпуске Новой Версии Программного Обеспечения:</li>
-        </ul>
-      </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img class="big-img" src="../img/integration.png" alt="integration" />
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Виды тестирования по целям и задачам</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block"><b>Функциональное</b> — проверка функциональности системы согласно требованиям.</div>
+            <div class="type-block"><b>Нефункциональное</b> — проверка атрибутов, не связанных с функциональностью: производительность, удобство, безопасность и др.</div>
+            <div class="type-block"><b>Инсталляционное</b> — проверка корректности установки и запуска приложения.</div>
+            <div class="type-block"><b>Конфигурационное</b> — проверка работы ПО при разных конфигурациях и окружениях.</div>
+            <div class="type-block"><b>Совместимость</b> — кросс-платформенное, кросс-браузерное, мобильное тестирование.</div>
+            <div class="type-block"><b>GUI тестирование</b> — проверка соответствия интерфейса спецификациям.</div>
+          </div>
+          <div class="col-md-6">
+            <div class="type-block"><b>Usability</b> — проверка удобства использования продукта.</div>
+            <div class="type-block"><b>Интернационализация и локализация</b> — проверка готовности к разным языкам и культурам.</div>
+            <div class="type-block"><b>Безопасность</b> — оценка защищённости программного продукта.</div>
+            <div class="type-block"><b>Доступность</b> — пригодность для людей с ограниченными возможностями.</div>
+            <div class="type-block"><b>Производительность</b> — оценка поведения системы под нагрузкой.</div>
+            <div class="type-block"><b>Нагрузочное и стресс-тестирование</b> — работа при высоких и экстремальных нагрузках.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Тестирование изменений</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block"><b>Тестирование нового функционала</b> — проверка новых возможностей продукта.</div>
+          </div>
+          <div class="col-md-6">
+            <div class="type-block"><b>Регрессионное тестирование</b> — проверка, что изменения не сломали существующую функциональность.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По фазе разработки</div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="type-block"><b>Тестирование разработки</b> — проводится во время разработки, чтобы выявить максимум дефектов до релиза.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Приёмочное тестирование</b> — проверка соответствия ожиданиям пользователя/заказчика.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Тестирование сопровождения</b> — проверка изменений и миграций в уже работающей системе.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По приоритету выполнения</div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="type-block"><b>Дымовое тестирование</b> — проверка самой главной функциональности, без которой продукт не имеет смысла.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Критический путь</b> — проверка функциональности, используемой в повседневной деятельности.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Расширенное тестирование</b> — проверка всей заявленной функциональности, включая малозначимые функции.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По принципу работы с приложением</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block"><b>Позитивное тестирование</b> — работа приложения при корректных действиях пользователя.</div>
+          </div>
+          <div class="col-md-6">
+            <div class="type-block"><b>Негативное тестирование</b> — работа приложения при ошибочных действиях и вводе некорректных данных.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По запуску кода</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block"><b>Статическое тестирование</b> — проверка без запуска кода на исполнение.</div>
+          </div>
+          <div class="col-md-6">
+            <div class="type-block"><b>Динамическое тестирование</b> — проверка с запуском кода на исполнение.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По доступу к коду</div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="type-block"><b>Белый ящик</b> — тестировщик имеет доступ к внутренней структуре и коду приложения.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Чёрный ящик</b> — тестировщик не имеет доступа к коду или не использует его.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Серый ящик</b> — комбинация методов белого и чёрного ящика.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">По формализации</div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="type-block"><b>Тест-кейсы</b> — тестирование по заранее подготовленным тест-кейсам.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Чек-листы</b> — тестирование по чек-листам.</div>
+          </div>
+          <div class="col-md-4">
+            <div class="type-block"><b>Исследовательское и хаотическое</b> — тестирование без формальных сценариев, на основе опыта и интуиции.</div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Когда проводить смоук и регрессионное тестирование?</div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="type-block"><b>Смоук тестирование</b> — быстрая проверка критических функций после сборки или обновления.</div>
+          </div>
+          <div class="col-md-6">
+            <div class="type-block"><b>Регрессионное тестирование</b> — проверка, что новые изменения не нарушили существующую функциональность.</div>
+          </div>
+        </div>
+      </section>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -17,79 +17,115 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
+      .fade-in.delay-1 { animation-delay: 0.2s; }
+      .fade-in.delay-2 { animation-delay: 0.4s; }
+      .fade-in.delay-3 { animation-delay: 0.6s; }
+      .fade-in.delay-4 { animation-delay: 0.8s; }
+      .fade-in.delay-5 { animation-delay: 1s; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
+      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
+      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">QA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sobesedovanie.html"
-                >Мобильное тестирование</a
-              >
-            </li>
-            <div class="dropdown mt-1">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Тестирование(теория)
-              </button>
-              <ul
-                class="dropdown-menu dropdown-menu-dark"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="../pages/testingtypes.html"
-                    >Виды и методы тестирования</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="../pages/documentation.html"
-                    >Тестирование требований и документации</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item">
-              <a class="nav-link" href="./testdisain.html"
-                >Техники тест дизайна</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/sql.html">SQL</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/automatedtesting.html"
-                >Автоматизированное тестирование</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bash</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Что такое тест-дизайн?</div>
+        <div class="accent-desc">
+          <b>Тест-дизайн</b> — это процесс создания тестовых сценариев и данных для эффективной проверки работы программного обеспечения. Техники тест-дизайна позволяют выявлять дефекты на ранних этапах и оптимизировать покрытие тестами.
+        </div>
+        <ul class="accent-list">
+          <li>Эквивалентное разбиение</li>
+          <li>Граничные значения</li>
+          <li>Попарное тестирование</li>
+          <li>Тестирование по сценариям</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Пример техники: Граничные значения</div>
+        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
+          <b>Тестируемое поле:</b> Возраст (допустимые значения 18-60)<br>
+          <b>Граничные значения:</b> 17, 18, 60, 61<br>
+          <b>Ожидаемый результат:</b> 17 и 61 — ошибка, 18 и 60 — успешно
+        </div>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Советы по выбору техник</div>
+        <ul class="accent-list">
+          <li>Используйте техники для сокращения числа тестов без потери качества</li>
+          <li>Комбинируйте техники для сложных сценариев</li>
+          <li>Документируйте выбранные подходы</li>
+        </ul>
+      </section>
+      <section class="section-block">
+        <div class="accent-title">Инструменты для тест-дизайна</div>
+        <ul class="accent-list">
+          <li><b>TestRail, Qase</b> — управление тест-кейсами</li>
+          <li><b>Pairwise Online</b> — генерация попарных тестов</li>
+          <li><b>MindMup</b> — построение диаграмм</li>
+        </ul>
+      </section>
+      <section class="section-block" style="background: #f3f6fa;">
+        <div class="accent-title">Глоссарий терминов</div>
+        <ul class="accent-list">
+          <li><b>Тест-кейс</b> — сценарий проверки</li>
+          <li><b>Тест-сьют</b> — набор тест-кейсов</li>
+          <li><b>Дефект</b> — найденная ошибка</li>
+          <li><b>Покрытие</b> — процент проверенного кода/функций</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.istqb.org/" target="_blank">ISTQB Foundation</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.iso.org/standard/35710.html" target="_blank">ISO/IEC/IEEE 29119 Software Testing</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://pairwise.org/" target="_blank">Pairwise Testing</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.mindmup.com/" target="_blank">MindMup (диаграммы)</a></li>
+        </ul>
+      </section>
       <div>
         <h1>Классы эквивалентности</h1>
         <p>

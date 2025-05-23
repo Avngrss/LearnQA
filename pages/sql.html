@@ -17,164 +17,183 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <style>
+      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
+      .fade-in.delay-1 { animation-delay: 0.2s; }
+      .fade-in.delay-2 { animation-delay: 0.4s; }
+      .fade-in.delay-3 { animation-delay: 0.6s; }
+      .fade-in.delay-4 { animation-delay: 0.8s; }
+      .fade-in.delay-5 { animation-delay: 1s; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .accent-block {
+        background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
+        border-left: 6px solid #6c3fc5;
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+      }
+      .code-block {
+        background: #23272f;
+        color: #fff;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-size: 1rem;
+        margin-bottom: 18px;
+        overflow-x: auto;
+      }
+      .icon-list li { list-style: none; margin-bottom: 10px; }
+      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
+      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
+      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
+      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+    </style>
   </head>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html">QA</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/sobesedovanie.html"
-              >Мобильное тестирование</a
-            >
-          </li>
-          <div class="dropdown mt-1">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Тестирование(теория)
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-dark"
-              aria-labelledby="dropdownMenuButton1"
-            >
-              <li>
-                <a class="dropdown-item" href="../pages/testingtypes.html"
-                  >Виды и методы тестирования</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="../pages/documentation.html"
-                  >Тестирование требований и документации</a
-                >
-              </li>
-            </ul>
-          </div>
-          <li class="nav-item">
-            <a class="nav-link" href="./testdisain.html"
-              >Техники тест дизайна</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/web.html">Веб тестирование</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./sql.html">SQL</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../pages/automatedtesting.html"
-              >Автоматизированное тестирование</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Bash</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container full">
-    <img class="img-fluid" src="../img/SQLCHEATSHEET.png" alt="" />
-    <div>
-      <img class="img-fluid" src="../img/SQl1.jpg" alt="" />
-      <img class="img-fluid" src="../img/SQL2.jpg" alt="" />
-    </div>
-    <div>
-      <h1>Что такое БД</h1>
-      <p>
-        <b>База данных</b> — это упорядоченный набор структурированной информации или
-        данных, которые обычно хранятся в электронном виде
-      </p>
-      <p>
-        <b>Система управления базами данных (СУБД)</b> – это комплекс
-        программно-языковых средств, позволяющих создать базы данных и управлять
-        данными. Иными словами, СУБД — это набор программ, позволяющий
-        организовывать, контролировать и администрировать базы данных.
-        Большинство сайтов не могут функционировать без базы данных, поэтому
-        СУБД используется практически повсеместно.
-      </p>
-      <p>
-        <b>Реляционная база данных</b> – это набор данных с заданными взаимосвязями.
-        Реляционная модель объединяет данные в таблицы, где каждая строка
-        представляет собой отдельную запись, а каждый столбец состоит из
-        атрибутов, содержащих значения. Табличный формат позволяет легко
-        устанавливать связи между точками данных и получать доступ к информации
-        любым необходимым способом, не реорганизовывая данные.
-      </p>
-      <p>
-        <b>Нереляционная база данных</b> — это база данных, в которой в отличие от
-        большинства традиционных систем баз данных не используется табличная
-        схема строк и столбцов. В этих базах данных применяется модель хранения,
-        оптимизированная под конкретные требования типа хранимых данных.
-        Например, данные могут храниться как простые пары "ключ — значение",
-        документы JSON или граф, состоящий из ребер и вершин.
-      </p>
-      <p>
-        <b>Первичный ключ</b> — это специальный столбец таблицы реляционной базы данных
-        (или комбинация столбцов), предназначенный для уникальной идентификации
-        каждой записи таблицы.
-      </p>
-      <p>
-        Внешний ключ нужен для того, чтобы связать две разные SQL-таблицы между
-        собой. Внешний ключ таблицы должен соответствует значению первичного
-        ключа таблицы, с которой он связан.
-      </p>
-      <p>
-        <b>Нормализация</b> — это процесс организации данных в базе данных, Она
-        включает в себя создание таблиц и установление связей между ними в
-        соответствии с правилами, разработанными как для защиты данных, так и
-        для повышения гибкости базы данных, устраняя избыточность и
-        несогласованную зависимость.
-      </p>
-      <h4>Первая нормальная форма</h4>
-      <ul>
-        <li>Каждая ячейка таблицы может хранить только одно значение</li>
-        <li>Все данные в одной колонке могут быть только одного типа</li>
-        <li>
-          Каждая запись в таблице должна однозначно отличаться от других записей
-        </li>
-        <li>В каждом столбце должно быть одинаковое количество строк</li>
-      </ul>
-      <h4>Вторая нормальная форма</h4>
-      <ul>
-        <li>Таблица должна быть в первой нормальной форме</li>
-        <li>
-          Все неключевые атрибуты таблицы должны зависеть от первичного ключа
-        </li>
-      </ul>
-      <h4>Третья нормальная форма</h4>
-      <ul>
-        <li>Таблица должна быть во второй нормальной форме</li>
-        <li>
-          Все колонки в таблице зависят от первичного ключа и не зависят друг от
-          друга
-        </li>
-      </ul>
-    </div>
-    <div>
-      <h1>Виды баз данных по моделям баз данных</h1>
-      <p>Объектно-ориентированные базы данных</p>
-      <p>Документо-ориентированные базы данных</p>
-      <p>Реляционные базы данных (RDBMS)</p>
-      <p>Также существуют облачные базы данных например Amazon web services</p>
-    </div>
-  </div>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">LearnQA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
+            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
+            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
+            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">SQL</a></li>
+            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-database"></i> Что такое тестирование баз данных?</div>
+        <div class="accent-block mb-3">
+          <b>Тестирование баз данных</b> — это проверка корректности хранения, обработки и извлечения данных, а также работы SQL-запросов и целостности данных.
+        </div>
+        <ul class="icon-list">
+          <li><i class="bi bi-diagram-3"></i> Проверка структуры и связей таблиц</li>
+          <li><i class="bi bi-pencil-square"></i> Тестирование CRUD-операций (создание, чтение, обновление, удаление)</li>
+          <li><i class="bi bi-shield-check"></i> Проверка ограничений (уникальность, внешние ключи)</li>
+          <li><i class="bi bi-speedometer2"></i> Тестирование производительности запросов</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-terminal"></i> Пример SQL-запроса</div>
+        <div class="code-block mb-2">
+SELECT name, email FROM users WHERE active = 1;
+-- Ожидаемый результат: Список активных пользователей
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-lightbulb"></i> Советы по тестированию БД</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-exclamation-circle"></i> Проверяйте граничные значения и NULL</li>
+          <li><i class="bi bi-bar-chart"></i> Тестируйте индексы и производительность</li>
+          <li><i class="bi bi-shield-check"></i> Проверяйте целостность данных после операций</li>
+          <li><i class="bi bi-arrow-repeat"></i> Используйте транзакции для тестов</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-tools"></i> Инструменты для работы с SQL</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-hdd-network"></i> <b>DataGrip, DBeaver</b> — работа с БД</li>
+          <li><i class="bi bi-server"></i> <b>pgAdmin</b> — администрирование PostgreSQL</li>
+          <li><i class="bi bi-globe"></i> <b>SQLFiddle</b> — онлайн-тестирование SQL</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-journal-text"></i> Глоссарий терминов</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-pencil"></i> <b>CRUD</b> — базовые операции с данными</li>
+          <li><i class="bi bi-link"></i> <b>JOIN</b> — объединение таблиц</li>
+          <li><i class="bi bi-lightning-charge"></i> <b>Индекс</b> — ускоряет поиск</li>
+          <li><i class="bi bi-arrow-repeat"></i> <b>Транзакция</b> — группа операций, выполняемых как единое целое</li>
+        </ul>
+      </section>
+      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.postgresql.org/docs/" target="_blank">PostgreSQL Documentation</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://dev.mysql.com/doc/" target="_blank">MySQL Documentation</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.sqlite.org/docs.html" target="_blank">SQLite Docs</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://sqlbolt.com/" target="_blank">SQLBolt (интерактивные уроки)</a></li>
+          <li><i class="bi bi-link-45deg"></i> <a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a></li>
+        </ul>
+      </section>
+      <section class="section-block fade-in">
+        <img class="big-img" src="../img/SQLCHEATSHEET.png" alt="SQL Cheatsheet" />
+      </section>
+      <section class="section-block fade-in">
+        <img class="big-img" src="../img/SQl1.jpg" alt="SQL Example 1" />
+        <img class="big-img" src="../img/SQL2.jpg" alt="SQL Example 2" />
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-database"></i> Что такое БД</div>
+        <div class="accent-block mb-3">
+          <b>База данных</b> — это упорядоченный набор структурированной информации или данных, которые обычно хранятся в электронном виде.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Система управления базами данных (СУБД)</b> – это комплекс программно-языковых средств, позволяющих создать базы данных и управлять данными.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Реляционная база данных</b> – это набор данных с заданными взаимосвязями. Табличный формат позволяет легко устанавливать связи между точками данных и получать доступ к информации любым необходимым способом.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Нереляционная база данных</b> — это база данных, в которой не используется табличная схема строк и столбцов. Например, данные могут храниться как пары "ключ — значение", документы JSON или граф.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Первичный ключ</b> — это специальный столбец таблицы реляционной базы данных (или комбинация столбцов), предназначенный для уникальной идентификации каждой записи таблицы.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Внешний ключ</b> — нужен для того, чтобы связать две разные SQL-таблицы между собой.
+        </div>
+        <div class="accent-block mb-3">
+          <b>Нормализация</b> — это процесс организации данных в базе данных, создание таблиц и установление связей между ними для защиты данных и повышения гибкости.
+        </div>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-list-ol"></i> Нормальные формы</div>
+        <div class="accent-block mb-2">
+          <b>Первая нормальная форма</b>
+          <ul>
+            <li>Каждая ячейка таблицы может хранить только одно значение</li>
+            <li>Все данные в одной колонке могут быть только одного типа</li>
+            <li>Каждая запись в таблице должна однозначно отличаться от других записей</li>
+            <li>В каждом столбце должно быть одинаковое количество строк</li>
+          </ul>
+        </div>
+        <div class="accent-block mb-2">
+          <b>Вторая нормальная форма</b>
+          <ul>
+            <li>Таблица должна быть в первой нормальной форме</li>
+            <li>Все неключевые атрибуты таблицы должны зависеть от первичного ключа</li>
+          </ul>
+        </div>
+        <div class="accent-block mb-2">
+          <b>Третья нормальная форма</b>
+          <ul>
+            <li>Таблица должна быть во второй нормальной форме</li>
+            <li>Все колонки в таблице зависят от первичного ключа и не зависят друг от друга</li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-block fade-in">
+        <div class="accent-title"><i class="bi bi-diagram-3"></i> Виды баз данных по моделям</div>
+        <ul class="icon-list">
+          <li><i class="bi bi-cube"></i> Объектно-ориентированные базы данных</li>
+          <li><i class="bi bi-file-earmark-text"></i> Документо-ориентированные базы данных</li>
+          <li><i class="bi bi-table"></i> Реляционные базы данных (RDBMS)</li>
+          <li><i class="bi bi-cloud"></i> Облачные базы данных (например, Amazon Web Services)</li>
+        </ul>
+      </section>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
