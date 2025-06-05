@@ -71,6 +71,7 @@
             <li class="nav-item"><a class="nav-link active" href="#">Веб-тестирование</a></li>
             <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
             <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdocs.html">Тестовая документация</a></li>
           </ul>
         </div>
       </div>
@@ -80,93 +81,6 @@
         <h1>Веб тестирование</h1>
         <p class="lead">Всё о клиент-серверных архитектурах, HTTP, API, безопасности, логах и современных веб-технологиях.</p>
       </header>
-      <section class="section-block" style="background: #f3f6fa;">
-        <div class="accent-title">Что такое веб-тестирование?</div>
-        <div class="accent-desc">
-          <b>Веб-тестирование</b> — это процесс проверки качества веб-приложений и сайтов. Оно включает тестирование функциональности, безопасности, производительности, совместимости и удобства использования. Веб-тестирование помогает выявить ошибки, уязвимости и несоответствия требованиям до того, как продукт попадёт к пользователям.
-        </div>
-        <ul class="accent-list">
-          <li>Проверка корректности работы интерфейса и логики</li>
-          <li>Тестирование API и обмена данными</li>
-          <li>Проверка безопасности (XSS, CSRF, HTTPS)</li>
-          <li>Анализ производительности и устойчивости</li>
-          <li>Проверка отображения на разных устройствах и браузерах</li>
-        </ul>
-      </section>
-      <section class="section-block">
-        <div class="accent-title">Пример HTTP-запроса и ответа</div>
-        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
-          <b>Запрос:</b><br>
-          GET /api/users HTTP/1.1<br>
-          Host: example.com<br>
-          Accept: application/json<br>
-          Authorization: Bearer &lt;token&gt;
-        </div>
-        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
-          <b>Ответ:</b><br>
-          HTTP/1.1 200 OK<br>
-          Content-Type: application/json<br>
-          <br>
-          [
-            {"id":1, "name":"Ivan"},
-            {"id":2, "name":"Anna"}
-          ]
-        </div>
-      </section>
-      <section class="section-block" style="background: #f3f6fa;">
-        <div class="accent-title">Безопасность веб-приложений</div>
-        <div class="accent-desc">
-          <b>XSS (Cross-Site Scripting)</b> — внедрение вредоносного кода в веб-страницу для кражи данных пользователя.<br>
-          <b>CSRF (Cross-Site Request Forgery)</b> — атака, при которой злоумышленник заставляет пользователя выполнить нежелательное действие на сайте.<br>
-          <b>HTTPS</b> — защищённый протокол передачи данных, предотвращает перехват и подмену информации.
-        </div>
-        <ul class="accent-list">
-          <li>Используйте HTTPS для всех страниц</li>
-          <li>Проверяйте вводимые пользователем данные</li>
-          <li>Ограничивайте права доступа</li>
-          <li>Используйте современные механизмы аутентификации</li>
-        </ul>
-      </section>
-      <section class="section-block">
-        <div class="accent-title">Инструменты для тестирования веба</div>
-        <ul class="accent-list">
-          <li><b>Postman</b> — тестирование API, отправка запросов, автоматизация сценариев</li>
-          <li><b>Fiddler, Charles</b> — перехват и анализ HTTP-трафика</li>
-          <li><b>DevTools (Chrome, Firefox)</b> — отладка, анализ DOM, сетевых запросов, производительности</li>
-          <li><b>Selenium, Cypress</b> — автоматизация UI-тестов</li>
-        </ul>
-      </section>
-      <section class="section-block" style="background: #f3f6fa;">
-        <div class="accent-title">Советы по тестированию API и UI</div>
-        <ul class="accent-list">
-          <li>Проверяйте граничные значения и невалидные данные</li>
-          <li>Тестируйте авторизацию и права доступа</li>
-          <li>Проверяйте обработку ошибок и сообщений</li>
-          <li>Используйте автоматизацию для рутинных проверок</li>
-          <li>Проверяйте отображение на разных устройствах</li>
-        </ul>
-      </section>
-      <section class="section-block">
-        <div class="accent-title">Глоссарий терминов</div>
-        <ul class="accent-list">
-          <li><b>API</b> — интерфейс для взаимодействия программ</li>
-          <li><b>HTTP</b> — протокол передачи данных</li>
-          <li><b>Cookie</b> — данные, хранимые в браузере</li>
-          <li><b>Token</b> — ключ для авторизации</li>
-          <li><b>Сессия</b> — период активности пользователя</li>
-          <li><b>Клиент</b> — пользовательское приложение</li>
-          <li><b>Сервер</b> — система, обрабатывающая запросы</li>
-        </ul>
-      </section>
-      <section class="section-block" style="background: #f3f6fa;">
-        <div class="accent-title">Полезные ресурсы</div>
-        <ul class="accent-list">
-          <li><a href="https://developer.mozilla.org/ru/" target="_blank">MDN Web Docs</a> — документация по веб-технологиям</li>
-          <li><a href="https://habr.com/ru/" target="_blank">Habr</a> — статьи и разборы кейсов</li>
-          <li><a href="https://www.postman.com/" target="_blank">Postman</a> — инструмент для тестирования API</li>
-          <li><a href="https://owasp.org/www-project-top-ten/" target="_blank">OWASP Top 10</a> — топ-10 уязвимостей веба</li>
-        </ul>
-      </section>
       <section class="section-block">
         <div class="accent-title">Клиент-серверная архитектура</div>
         <div class="accent-desc">
@@ -226,7 +140,7 @@
       </section>
       <section class="section-block">
         <div class="accent-title">Микросервисы и монолиты</div>
-        <div class="type-block mb-2"><b>Монолитная архитектура</b> — все модули в одном приложении.</div>
+        <div class="type-block mb-2"><b>Монолитная архитектура</b> — Единое приложение, где все компоненты (UI, бизнес-логика, БД) работают в одном процессе и развертываются как единое целое.</div>
         <ul class="accent-list">
           <li>+ Простота разработки и развертывания</li>
           <li>+ Производительность</li>
@@ -235,7 +149,7 @@
           <li>- Зависимость компонентов</li>
           <li>- Ограниченная гибкость</li>
         </ul>
-        <div class="type-block mb-2"><b>Микросервисная архитектура</b> — приложение из независимых сервисов.</div>
+        <div class="type-block mb-2"><b>Микросервисная архитектура</b> — Приложение разбито на множество небольших независимых сервисов, каждый из которых решает свою задачу и общается с другими через API (HTTP, gRPC, Message Queue).</div>
         <ul class="accent-list">
           <li>+ Масштабируемость</li>
           <li>+ Гибкость разработки</li>

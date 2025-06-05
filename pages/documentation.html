@@ -60,6 +60,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
             <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
             <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
             <li class="nav-item"><a class="nav-link active" href="#">Документация</a></li>
@@ -67,14 +68,15 @@
             <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
             <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
             <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
+            <li class="nav-item"><a class="nav-link" href="testdocs.html">Тестовая документация</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="container">
-      <section class="section-block" style="background: #f3f6fa;">
+      <section class="section-block fade-in" style="background: #f3f6fa;">
         <div class="accent-title">Что такое тестирование требований и документации?</div>
-        <div class="accent-desc">
+        <div class="accent-block mb-3">
           <b>Тестирование требований</b> — это анализ и проверка полноты, корректности и реализуемости требований к продукту. Качественная документация — залог успешного тестирования и разработки.
         </div>
         <ul class="accent-list">
@@ -83,14 +85,7 @@
           <li>Работа с различными видами документации</li>
         </ul>
       </section>
-      <section class="section-block">
-        <div class="accent-title">Пример требования</div>
-        <div class="type-block mb-2" style="font-family:monospace; background:#f8f9fa;">
-          <b>Требование:</b> Система должна позволять пользователю восстановить пароль через email<br>
-          <b>Критерии приёмки:</b> Пользователь получает письмо с ссылкой для сброса пароля
-        </div>
-      </section>
-      <section class="section-block" style="background: #f3f6fa;">
+      <section class="section-block fade-in" style="background: #fff;">
         <div class="accent-title">Советы по работе с документацией</div>
         <ul class="accent-list">
           <li>Задавайте уточняющие вопросы</li>
@@ -98,23 +93,7 @@
           <li>Документируйте все изменения</li>
         </ul>
       </section>
-      <section class="section-block">
-        <div class="accent-title">Инструменты для анализа требований</div>
-        <ul class="accent-list">
-          <li><b>Confluence</b> — ведение документации</li>
-          <li><b>Jira</b> — управление требованиями и задачами</li>
-          <li><b>Draw.io</b> — визуализация процессов</li>
-        </ul>
-      </section>
-      <section class="section-block" style="background: #f3f6fa;">
-        <div class="accent-title">Глоссарий терминов</div>
-        <ul class="accent-list">
-          <li><b>Требование</b> — описание того, что должно быть реализовано</li>
-          <li><b>Критерий приёмки</b> — условие, при котором требование считается выполненным</li>
-          <li><b>Документация</b> — совокупность всех описаний продукта</li>
-        </ul>
-      </section>
-      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
+      <section class="section-block fade-in" style="background: #f3f6fa;">
         <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
         <ul class="icon-list">
           <li><i class="bi bi-link-45deg"></i> <a href="https://confluence.atlassian.com/" target="_blank">Atlassian Confluence Docs</a></li>
@@ -122,362 +101,133 @@
           <li><i class="bi bi-link-45deg"></i> <a href="https://www.incose.org/products-and-publications/se-handbook" target="_blank">INCOSE SE Handbook (Requirements Engineering)</a></li>
         </ul>
       </section>
-      <div>
-        <p>
-          <i class="text-info">Требование (requirement)</i> - Требование — это
-          спецификация того, что должно быть реализовано. В нем описывается
-          поведение и атрибуты системы.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-center">КАКУЮ ДОКУМЕНТАЦИЮ НУЖНО ТЕСТИРОВАТЬ?</h4>
-        <p class="text-info">
-          <ins>Проектную документацию (project documentation)</ins>
-        </p>
-        <ul>
+      <section class="section-block fade-in" style="background: #fff;">
+        <div class="accent-title">Что такое требование?</div>
+        <div class="accent-block mb-3">
+          <b>Требование (requirement)</b> — это спецификация того, что должно быть реализовано. В нем описывается поведение и атрибуты системы.
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title">Какую документацию нужно тестировать?</div>
+        <div class="accent-block mb-2">
+          <b>Проектная документация:</b>
+        </div>
+        <ul class="accent-list">
           <li>требования к программному продукту (product requirements)</li>
-          <li>
-            функциональные спецификации к программному продукту (functional
-            specifications)
-          </li>
-          <li>архитектуру (architecture) и дизайн (design)</li>
-          <li>план проекта (project plan) и тестовый план (test plan)</li>
-          <li>тест кейсы и сценарии (test cases, test scenarios)</li>
+          <li>функциональные спецификации (functional specifications)</li>
+          <li>архитектура и дизайн</li>
+          <li>план проекта и тестовый план</li>
+          <li>тест кейсы и сценарии</li>
         </ul>
-        <p class="text-info">
-          <ins
-            >Сопроводительную документацию (и документацию для пользователей):
-          </ins>
-        </p>
-        <ul>
-          <li>интерактивную помощь (on-line help)</li>
-          <li>
-            руководства по установке (Installation guide) и использованию
-            программного продукта (user manual)
-          </li>
+        <div class="accent-block mb-2">
+          <b>Сопроводительная документация:</b>
+        </div>
+        <ul class="accent-list">
+          <li>интерактивная помощь (on-line help)</li>
+          <li>руководства по установке и использованию</li>
         </ul>
-      </div>
-      <div>
-        <h4 class="text-center">ТИПЫ ТРЕБОВАНИЙ</h4>
-        <p>
-          <i class="text-info"
-            >Функциональные требования (functional requirements)</i
-          >
-          - что система должна делать
-        </p>
-        <p>
-          <i class="text-info"
-            >Нефункциональные требования (non-functional requirements)</i
-          >
-          - как система должна это делать Требования, относящиеся не к
-          функциональности, а к таким атрибутам как: надежность эффективность
-          практичность сопровождаемость переносимость
-        </p>
-      </div>
-      <div class="text-center">
-        <h4 class="text-center">УРОВНИ ТРЕБОВАНИЙ</h4>
-        <img class="img-fluid" src="../img/scale_1200.png" alt="" />
-      </div>
-      <div>
-        <h4 class="text-center">ПУТИ ВЫЯВЛЕНИЯ ТРЕБОВАНИЙ</h4>
-        <ul class="list-group" class="list-group-item">
-          <li class="list-group-item">ИНТЕРВЬЮ</li>
-          <li class="list-group-item">СЕМИНАРЫ</li>
-          <li class="list-group-item">НАБЛЮДЕНИЕ</li>
-          <li class="list-group-item">АНКЕТИРОВАНИЕ</li>
-          <li class="list-group-item">ПРОТОТИПИРОВАНИЕ</li>
-          <li class="list-group-item">САМОСТОЯТЕЛЬНОЕ ОПИСАНИЕ</li>
+      </section>
+      <section class="section-block fade-in" style="background: #fff;">
+        <div class="accent-title">Типы требований</div>
+        <div class="accent-block mb-2">
+          <b>Функциональные требования</b> — что система должна делать<br>
+          <b>Нефункциональные требования</b> — как система должна это делать (надежность, эффективность, сопровождаемость, переносимость и др.)
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title">Уровни требований</div>
+        <img class="big-img" src="../img/scale_1200.png" alt="Уровни требований" />
+      </section>
+      <section class="section-block fade-in" style="background: #fff;">
+        <div class="accent-title">Пути выявления требований</div>
+        <ul class="accent-list">
+          <li>Интервью</li>
+          <li>Семинары</li>
+          <li>Наблюдение</li>
+          <li>Анкетирование</li>
+          <li>Прототипирование</li>
+          <li>Самостоятельное описание</li>
         </ul>
-      </div>
-      <div>
-        <h4 class="text-center">СВОЙСТВА ХОРОШЕГО ТРЕБОВАНИЯ</h4>
-        <p>Каждое требование должно быть:</p>
-        <ul class="list-group" class="list-group-item">
-          <li class="list-group-item">Завершённым (complete)</li>
-          <li class="list-group-item">Непротиворечивым (consistent)</li>
-          <li class="list-group-item">Корректным (correct)</li>
-          <li class="list-group-item">Недвусмысленным (unambiguous)</li>
-          <li class="list-group-item">Проверяемым (verifiable)</li>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title">Свойства хорошего требования</div>
+        <div class="accent-block mb-2">Каждое требование должно быть:</div>
+        <ul class="accent-list">
+          <li>Завершённым (complete)</li>
+          <li>Непротиворечивым (consistent)</li>
+          <li>Корректным (correct)</li>
+          <li>Недвусмысленным (unambiguous)</li>
+          <li>Проверяемым (verifiable)</li>
         </ul>
-        <p>Наборы требований должны быть:</p>
-        <ul class="list-group" class="list-group-item">
-          <li class="list-group-item">Модифицируемыми (modifiable)</li>
-          <li class="list-group-item">Прослеживаемыми (traceable)</li>
-          <li class="list-group-item">
-            Проранжированными по важности, стабильности и срочности (ranked for
-            importance, stability and priority).
-          </li>
+        <div class="accent-block mb-2">Наборы требований должны быть:</div>
+        <ul class="accent-list">
+          <li>Модифицируемыми (modifiable)</li>
+          <li>Прослеживаемыми (traceable)</li>
+          <li>Проранжированными по важности, стабильности и срочности</li>
         </ul>
-        <p>
-          <i class="text-info">Завершённость (completeness) </i>
-          - Проблемы незавершённости (неполноты): Отсутствуют нефункциональные
-          требования или нефункциональные составляющие требования. Мы знаем, что
-          система должна делать, но не КАК она должна это делать.
-        </p>
-        <p>Рекомендуется задавать общие вопросы. Их преимущества:</p>
-        <ul>
-          <li>универсальные</li>
-          <li>не навязывают решение</li>
-          <li>
-            не загоняют заказчика в ситуацию, когда ему приходится выбирать из
-            имеющихся вариантов
-          </li>
+        <div class="accent-block mb-2">
+          <b>Завершённость:</b> Проблемы незавершённости — отсутствие нефункциональных требований, неясно КАК система должна работать.<br>
+          <b>Непротиворечивость:</b> Противоречия между требованиями, таблицами, текстом, прототипом.<br>
+          <b>Корректность:</b> Ошибки из-за опечаток, устаревших требований, технически невыполнимых требований.<br>
+          <b>Недвусмысленность:</b> Если требование можно понять по-разному, его поймут по-разному.<br>
+          <b>Проверяемость:</b> Если не удаётся придумать тесты для требования — оно непроверяемо.<br>
+          <b>Модифицируемость:</b> После обновления требований сложно отследить все противоречия.<br>
+          <b>Прослеживаемость:</b> Нет нумерации, оглавления, перекрёстных ссылок — хаос.
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #fff;">
+        <div class="accent-title">Техники тестирования требований</div>
+        <ul class="accent-list">
+          <li>Взаимный просмотр (peer review)</li>
+          <li>Вопросы</li>
+          <li>Тест кейсы</li>
+          <li>Рисунки, схемы и т.д.</li>
         </ul>
-        <p>
-          Хорошая аналогия – вопросы репортера (или маленького ребёнка): «А
-          что?», «А зачем?», «А почему?»
-        </p>
-        <p>
-          <i class="text-info">Непротиворечивость (consistency) </i>
-          - Противоречия внутри одного требования. Противоречия между двумя и
-          более требованиями. Противоречия между таблицами и текстом.
-          Противоречия между картинкой и текстом. Противоречия между требованием
-          и прототипом.
-        </p>
-        <p>
-          <i class="text-info">Корректность (correctness) </i>
-          - Проблемы некорректности Ошибки могут быть вызваны:
-        </p>
-        <ul>
-          <li>опечатками, последствиями «copy-paste»</li>
-          <li>
-            остатками устаревших требований наличием «озолочения» («gold
-            plating») наличием технически невыполнимых требований
-          </li>
-          <li>
-            наличием неаргументированных требований к дизайну и архитектуре
-          </li>
-        </ul>
-        <p>
-          <i class="text-info">Недвусмысленность (unambiguousness) </i>
-          - Если что-то можно понять несколькими способами, можно быть
-          уверенным, что разные люди поймут это по-разному, допускающей двоякого
-          толкования
-        </p>
-        <p>
-          В английском языке есть много слов-индикаторов, наличие которых в
-          требовании должно насторожить тестировщика: <br />
-          Adequate, be able to, easy, provide for, as a minimum, be capable of,
-          effective, timely, as applicable, if possible, TBD, as appropriate, if
-          practical, at a minimum, but not limited to, capability of, capability
-          to, normal, minimize, maximize, optimize, rapid, user-friendly,
-          simple, often, usual, large, flexible, robust, state-of-the-art,
-          improved, efficient.
-        </p>
-        <p>
-          <i class="text-info">Проверяемость (verifiability) </i>
-          - Как понять, что требование непроверяемо? Попробовать придумать
-          несколько тестов для его проверки. Если тесты не придумываются – вот
-          она, проблема
-        </p>
-        <p>
-          <i class="text-info">Модифицируемость (modifiability) </i>
-          - Проблемы немодифицируемости: После каждого обновления требований
-          понадобится тратить недели чтобы выловить все появившиеся
-          противоречия.
-        </p>
-        <p>
-          <i class="text-info">Прослеживаемость (traceability) </i>
-          - Если требования не пронумерованы, не имеют чёткого оглавления, не
-          имеют работающих перекрёстными ссылок – это хаос. А в хаосе ошибки
-          плодятся с удивительной скоростью.
-        </p>
-        <p>
-          <i class="text-info">Проранжированность (ranked for…) </i>
-        </p>
-        <ul>
-          <li>по важности (importance)</li>
-          <li>по стабильности (stability)</li>
-          <li>по срочности (priority)</li>
-        </ul>
-        <p>
-          Если требования не проранжированы по важности, стабильности и
-          срочности, мы рискуем уделить основное внимание не тому, что на самом
-          деле важно для заказчика.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-center">ТЕХНИКИ ТЕСТИРОВАНИЯ ТРЕБОВАНИЙ</h4>
-        <ul class="list-group" class="list-group-item">
-          <li class="list-group-item">взаимный просмотр (peer review)</li>
-          <li class="list-group-item">вопросы</li>
-          <li class="list-group-item">тест кейсы</li>
-          <li class="list-group-item">рисунки, схемы и т.д</li>
-        </ul>
-        <p>
-          <i class="text-info">Взаимный просмотр (peer review) </i>
-          - Обычно, выделяют три уровня перепросмотра: Неформальный
-          перепросмотр. Двое коллег просто обмениваются листиками (файликами) и
-          правят найденные ошибки, которые потом обсуждаются за чашкой чая или в
-          любое другое относительно свободное время Технический перепросмотр
-          выполняется группой специалистов Формальная инспекция.
-        </p>
-        <p>
-          <i class="text-info">Вопросы </i>
-          - Самый простой и не требующий большого опыта способ – задавать как
-          можно больше вопросов
-        </p>
-        <p>Как задать вопрос более опытному коллеге/разработчику/заказчику:</p>
-        <ul class="list-group" class="list-group-item">
-          <li class="list-group-item">
-            узнайте особенности проекта, у кого что спрашивать
-          </li>
-          <li class="list-group-item">
-            приоритизируйте вопросы, начинайте с маленьких наиболее важных
-            вопросов, сначала заработайте репутацию
-          </li>
-          <li class="list-group-item">
-            не задавайте вопрос в формате «Я ничего не понял», правильнее будет
-            сказать «Я разобрался в том - то, но остался вопрос по этой части»
-          </li>
-          <li class="list-group-item">
-            упомяните важность ответа на ваши вопросы (например, невозможно
-            начать писать тест-кейсы)
-          </li>
-          <li class="list-group-item">
-            вместо 3-го письма предложите собраться на короткое совещание и
-            обсудить вопросы устно (в meeting follow-up можно будет вставить
-            оставшиеся вопросы)
-          </li>
-          <li class="list-group-item">попытайтесь найти решение сами</li>
-          <li class="list-group-item">1 общий вопрос вместо 10 мелких</li>
-          <li class="list-group-item">
-            не задавайте общие вопросы в письмах, предлагайте варианты
-          </li>
-          <li class="list-group-item">
-            хорошие личные взаимоотношения помогают
-          </li>
-          <li class="list-group-item">простые предложения, простой язык</li>
-          <li class="list-group-item">
-            попросите коллег перечитать, если вопрос сложный
-          </li>
-          <li class="list-group-item">
-            добавляйте скриншоты, мокапы, рисунки, схемы
-          </li>
-        </ul>
-        <b>Нужно ли уточнять длину полей и правила валидации? </b>
-        <i>Однозначно да: </i>
-        <ul>
-          <li>обязательность для заполнения</li>
-          <li>чувствительность к регистру</li>
-          <li>длина</li>
-          <li>разрешенные символы</li>
-          <li>языки</li>
-          <li>значения по умолчанию</li>
-          <li>тексты сообщений</li>
-        </ul>
-        <b>Что делать с ответом? </b>
-        <ul>
-          <li>расценивайте ответ как новое требование</li>
-          <li>есть ли расхождения с тем, что нам уже известно?</li>
-          <li>актуализируйте свои тесты, согласно новым данным</li>
-          <li>
-            получили ли вы нужное представление о интересующем вас вопросе?
-          </li>
-          <li>
-            нет – задайте дополнительные вопросы (иногда нужно 5+ циклов
-            вопрос/ответ, чтобы решить проблему)
-          </li>
-          <li class="list-group-item">документируйте/сохраняйте ответы.</li>
-        </ul>
-        <p>
-          <i class="text-info">Тест кейсы </i>
-          -Когда вы видите требование, спросите себя: «Как я буду его
-          тестировать? Какие тесты очевидно покажут, что это требование
-          реализовано правильно?» Во время написания тест кейсов возникнут новые
-          вопросы.
-        </p>
-        <p>
-          <i class="text-info">Рисунки, схемы и т.д. </i>
-          -Когда вы видите требование, спросите себя: «Как я буду его
-          тестировать? Какие тесты очевидно покажут, что это требование
-          реализовано правильно?» Во время написания тест кейсов возникнут новые
-          вопросы
-        </p>
-      </div>
-      <div>
-        <h4 class="text-center">ТРЕБОВАНИЯ МОГУТ БЫТЬ ПРЕДСТАВЛЕНЫ:</h4>
-        <b>Требования могут быть представлены в виде: </b>
-        <ul>
-          <li>
-            Общая концепция (Vision) <br />
-            Проблемы концепции: <br />
-            не понятно, как это будет реализовано на практике – отображаться, в
-            точности функционировать опираясь на концепцию, разработчики могут
-            принимать совершенно разные решения, 1 фраза может подразумевать
-            очень большое количество функциональности, бизнес-определения часто
-            не понятны, для команды разработки
-          </li>
-          <li>
-            Варианты использования (Use cases) <br />
-            Проблемы вариантов использования: <br />
-            могут отсутствовать сценарии с альтернативным поведением, не все
-            возможные сценарии описаны, предлагаемое поведение не удобно для
-            пользователя, предлагаемое очень тяжело реализовать, противоречия
-            между разными процессами, использования непонятный GUI, точный
-            перечень функций не ясен
-          </li>
+        <div class="accent-block mb-2">
+          <b>Взаимный просмотр:</b> Неформальный, технический, формальная инспекция.<br>
+          <b>Вопросы:</b> Задавайте как можно больше вопросов, уточняйте детали.<br>
+          <b>Тест кейсы:</b> Как будете тестировать требование? Какие тесты покажут, что оно реализовано правильно?<br>
+          <b>Рисунки, схемы:</b> Визуализируйте требования для лучшего понимания.
+        </div>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title">Форматы представления требований</div>
+        <ul class="accent-list">
+          <li>Общая концепция (Vision)</li>
+          <li>Варианты использования (Use cases)</li>
           <li>Истории использования (User Stories)</li>
           <li>Функциональные спецификации (Functional specs)</li>
           <li>Технические изменения (Technical change)</li>
-          <li>
-            Готовое приложение <br />
-            старая работающая система (при миграции на новую платформу), продукт
-            конкурентов <br />
-            Проблемы готового приложения: <br />
-            нет уверенности, что мы определили все имеющиеся функции, поведение
-            которое мы видим – это баг или фича?, для чего нам нужна эта
-            функция?, какие входные данные для этой функции являются валидными,
-            а какие нет?
-          </li>
+          <li>Готовое приложение (legacy system, конкурентный продукт)</li>
         </ul>
-      </div>
-      <div>
-        <h4 class="text-center">ПРОБЛЕМЫ СПЕЦИФИКАЦИЙ</h4>
-        <ul>
-          <li>противоречия между картинкой и текстом</li>
-          <li>противоречия между новой картинкой и старой</li>
-          <li>противоречия внутри одной картинки</li>
-          <li>
-            логика работы функции непонятна (кнопка есть, но непонятно для чего)
-          </li>
-          <li>
-            длинные спецификации, невозможно редактировать, отслеживать
-            изменения
-          </li>
-          <li>много страниц, трудно читать и работать с документом</li>
+      </section>
+      <section class="section-block fade-in" style="background: #fff;">
+        <div class="accent-title">Проблемы спецификаций</div>
+        <ul class="accent-list">
+          <li>Противоречия между картинкой и текстом</li>
+          <li>Противоречия между новой и старой картинкой</li>
+          <li>Противоречия внутри одной картинки</li>
+          <li>Непонятная логика работы функций</li>
+          <li>Длинные спецификации, сложно редактировать и отслеживать изменения</li>
+          <li>Много страниц, трудно читать и работать с документом</li>
         </ul>
-      </div>
-      <h4 class="text-center">НУЖНО ВЫЯСНИТЬ:</h4>
-      <ul class="list-group" class="list-group-item">
-        <li class="list-group-item">Где хранятся требования?</li>
-        <li class="list-group-item">Какие источники требований у нас есть?</li>
-        <li class="list-group-item">
-          Кто помещает требования в официальное хранилище?
-        </li>
-        <li class="list-group-item">
-          Как мы узнаем об изменениях в требованиях?
-        </li>
-        <li class="list-group-item">
-          Что более правильно – изначальные спецификации, последующие письма,
-          прототип?
-        </li>
-        <li class="list-group-item">
-          Кто утверждает окончательные требования?
-        </li>
-        <li class="list-group-item">Как найти новые/измененные требования?</li>
-        <li class="list-group-item">
-          Как мы можем предложить внести изменения в требования?
-        </li>
-        <li class="list-group-item">Кому мы можем задавать вопросы?</li>
-        <li class="list-group-item">
-          Кому и как мы должны сообщить о проблемах с требованиями?
-        </li>
-        <li class="list-group-item">
-          Если нам не отвечают, кого спрашивать следующим, кого в конечном
-          итоге?
-        </li>
-      </ul>
+      </section>
+      <section class="section-block fade-in" style="background: #f3f6fa;">
+        <div class="accent-title">Что важно выяснить при работе с требованиями?</div>
+        <ul class="accent-list">
+          <li>Где хранятся требования?</li>
+          <li>Какие источники требований у нас есть?</li>
+          <li>Кто помещает требования в официальное хранилище?</li>
+          <li>Как мы узнаем об изменениях в требованиях?</li>
+          <li>Что более правильно — изначальные спецификации, письма, прототип?</li>
+          <li>Кто утверждает окончательные требования?</li>
+          <li>Как найти новые/изменённые требования?</li>
+          <li>Как предложить изменения?</li>
+          <li>Кому задавать вопросы?</li>
+          <li>Кому и как сообщать о проблемах с требованиями?</li>
+          <li>Если не отвечают — кого спрашивать дальше?</li>
+        </ul>
+      </section>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
