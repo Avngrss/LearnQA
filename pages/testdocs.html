@@ -4,61 +4,147 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тестовая документация</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <style>
-      .fade-in { opacity: 0; animation: fadeIn 1s ease forwards; }
-      .fade-in.delay-1 { animation-delay: 0.2s; }
-      .fade-in.delay-2 { animation-delay: 0.4s; }
-      .fade-in.delay-3 { animation-delay: 0.6s; }
-      .fade-in.delay-4 { animation-delay: 0.8s; }
-      .fade-in.delay-5 { animation-delay: 1s; }
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+      }
+      .fade-in.delay-1 {
+        animation-delay: 0.2s;
+      }
+      .fade-in.delay-2 {
+        animation-delay: 0.4s;
+      }
+      .fade-in.delay-3 {
+        animation-delay: 0.6s;
+      }
+      .fade-in.delay-4 {
+        animation-delay: 0.8s;
+      }
+      .fade-in.delay-5 {
+        animation-delay: 1s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
       .accent-block {
         background: linear-gradient(90deg, #f3f6fa 70%, #e0e7ff 100%);
         border-left: 6px solid #6c3fc5;
         border-radius: 12px;
         padding: 20px 24px;
         margin-bottom: 24px;
-        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+        box-shadow: 0 2px 16px rgba(108, 63, 197, 0.07);
       }
       .code-block {
         background: #23272f;
         color: #fff;
         border-radius: 10px;
         padding: 16px 18px;
-        font-family: 'Fira Mono', 'Consolas', monospace;
+        font-family: "Fira Mono", "Consolas", monospace;
         font-size: 1rem;
         margin-bottom: 18px;
         overflow-x: auto;
       }
-      .icon-list li { list-style: none; margin-bottom: 10px; }
-      .icon-list li i { color: #6c3fc5; margin-right: 8px; font-size: 1.2em; }
-      .big-img { width: 100%; max-width: 600px; border-radius: 18px; box-shadow: 0 6px 32px rgba(108,63,197,0.13); margin: 24px auto 32px auto; display: block; }
-      .accent-title { color: #3a2e6c; font-weight: 700; margin-bottom: 18px; font-size: 2rem; }
-      @media (max-width: 700px) { .accent-title { font-size: 1.2rem; } .big-img { max-width: 98vw; } }
+      .icon-list li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      .icon-list li i {
+        color: #6c3fc5;
+        margin-right: 8px;
+        font-size: 1.2em;
+      }
+      .big-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(108, 63, 197, 0.13);
+        margin: 24px auto 32px auto;
+        display: block;
+      }
+      .accent-title {
+        color: #3a2e6c;
+        font-weight: 700;
+        margin-bottom: 18px;
+        font-size: 2rem;
+      }
+      @media (max-width: 700px) {
+        .accent-title {
+          font-size: 1.2rem;
+        }
+        .big-img {
+          max-width: 98vw;
+        }
+      }
     </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">LearnQA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
-            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
-            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
-            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
-            <li class="nav-item"><a class="nav-link" href="web.html">Веб-тестирование</a></li>
-            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
-            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
-            <li class="nav-item"><a class="nav-link active" href="#">Тестовая документация</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobesedovanie.html"
+                >Мобильное тестирование</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testingtypes.html">Виды тестирования</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentation.html">Документация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testdisain.html">Тест-дизайн</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web.html">Веб-тестирование</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sql.html">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="automatedtesting.html">Автоматизация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Тестовая документация</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -66,98 +152,148 @@
     <div class="container">
       <header class="mb-5 text-center">
         <h1>Тестовая документация: план, стратегия, чек-листы, кейсы</h1>
-        <p class="lead">Подробно о ключевых документах в тестировании ПО: структура, примеры, советы и стандарты.</p>
       </header>
-      <section class="section-block fade-in delay-1" style="background: #f3f6fa;">
+      <section
+        class="section-block fade-in delay-1"
+        style="background: #f3f6fa"
+      >
         <div class="accent-title">Тест-план (Test Plan)</div>
         <div class="accent-block mb-2">
-          <b>Тест-план</b> — это основной документ, описывающий объём, подходы, ресурсы, расписание и критерии тестирования для проекта.
+          <b>Тест-план</b> — это основной документ, описывающий объём, подходы,
+          ресурсы, расписание и критерии тестирования для проекта.
         </div>
         <ul class="icon-list">
           <li><i class="bi bi-list-check"></i> Цели и задачи тестирования</li>
           <li><i class="bi bi-diagram-3"></i> Объекты тестирования</li>
           <li><i class="bi bi-people"></i> Роли и ответственные</li>
           <li><i class="bi bi-calendar"></i> Сроки и этапы</li>
-          <li><i class="bi bi-flag"></i> Критерии начала и окончания тестирования</li>
-          <li><i class="bi bi-exclamation-triangle"></i> Риски и способы их снижения</li>
+          <li>
+            <i class="bi bi-flag"></i> Критерии начала и окончания тестирования
+          </li>
+          <li>
+            <i class="bi bi-exclamation-triangle"></i> Риски и способы их
+            снижения
+          </li>
         </ul>
         <div class="code-block">
-Разделы тест-плана:
-1. Введение
-2. Объекты тестирования
-3. Объем тестирования
-4. Подходы и методы
-5. Критерии начала/окончания
-6. Роли и ресурсы
-7. Расписание
-8. Риски
-9. Приложения
-        </div>
-        <div class="accent-block mb-2">
-          <b>Пример:</b> "Тест-план для мобильного приложения: тестируются авторизация, регистрация, профиль. Используются ручные и автоматизированные тесты. Критерий окончания — успешное прохождение smoke и регрессионных тестов."
+          Разделы тест-плана: 1. Введение 2. Объекты тестирования 3. Объем
+          тестирования 4. Подходы и методы 5. Критерии начала/окончания 6. Роли
+          и ресурсы 7. Расписание 8. Риски 9. Приложения
         </div>
       </section>
       <section class="section-block fade-in delay-2">
         <div class="accent-title">Тестовая стратегия (Test Strategy)</div>
         <div class="accent-block mb-2">
-          <b>Тестовая стратегия</b> — это высокоуровневый документ, определяющий общий подход к тестированию в компании или проекте.
+          <b>Тестовая стратегия</b> — Это высокоуровневый документ, определяющий как, что и когда тестировать в проекте
         </div>
         <ul class="icon-list">
-          <li><i class="bi bi-lightbulb"></i> Описывает методы и типы тестирования</li>
-          <li><i class="bi bi-shield-check"></i> Подходы к качеству и безопасности</li>
+          <li>
+            <i class="bi bi-lightbulb"></i> Описывает методы и типы тестирования
+          </li>
+          <li>
+            <i class="bi bi-shield-check"></i> Подходы к качеству и безопасности
+          </li>
           <li><i class="bi bi-gear"></i> Используемые инструменты</li>
           <li><i class="bi bi-flag"></i> Критерии приёмки</li>
         </ul>
         <div class="code-block">
-Стратегия: "Для всех веб-проектов применяется автоматизация smoke и регрессионных тестов, ручное тестирование новых функций, обязательная проверка безопасности."
+          Разделы тестовой стратегии: 1. Цель и область применения 2. Подход к тестированию 3. Уровни тестирования 4. Типы тестирования 5. Роли и ответственность 6. Тестовая среда 7. Инструменты и технологии 8. Критерии входа и выхода 9. Риски и меры реагирования 10. График тестирования 11. Критерии качества 12. Отчетность и метрики
         </div>
         <div class="accent-block mb-2">
-          <b>Отличие от тест-плана:</b> Стратегия — это общий подход, а план — конкретика для проекта.
+          <b>Отличие от тест-плана:</b> Стратегия — это общий подход, а план —
+          конкретика для проекта.
         </div>
       </section>
-      <section class="section-block fade-in delay-3" style="background: #f3f6fa;">
-        <div class="accent-title">Чек-листы, тест-кейсы, баг-репорты, отчёты</div>
-        <ul class="icon-list">
-          <li><i class="bi bi-card-checklist"></i> <b>Чек-лист</b> — краткий список проверок без подробных шагов</li>
-          <li><i class="bi bi-file-earmark-text"></i> <b>Тест-кейс</b> — формализованный сценарий с шагами, входными данными и ожидаемым результатом</li>
-          <li><i class="bi bi-bug"></i> <b>Баг-репорт</b> — описание найденного дефекта</li>
-          <li><i class="bi bi-clipboard-data"></i> <b>Отчёт о тестировании</b> — итоговый документ по результатам тестирования</li>
-        </ul>
-        <div class="code-block">
-Пример тест-кейса:
-1. Название: Проверка восстановления пароля
-2. Шаги: Запросить сброс, перейти по ссылке
-3. Ожидаемый результат: Пароль изменён
+      <section class="section-block fade-in delay-2">
+        <div class="accent-title">Отчёт о результатах тестирования (Test Summary Report)</div>
+        <div class="accent-block mb-2">
+          <b>Отчёт о результатах тестирования</b> — документ, который подводит итоги выполненного тестирования на определённом этапе разработки или перед выпуском. Он содержит информацию о проделанной работе, выявленных дефектах, покрытии требований и общем состоянии качества программного обеспечения.
         </div>
         <div class="code-block">
-Пример баг-репорта:
-1. Название: Ошибка при восстановлении пароля
-2. Шаги: ...
-3. Фактический результат: ...
-4. Ожидаемый результат: ...
+          Разделы отчёта о результатах тестирования: 1. Идентификация отчёта 2. Цели и объём тестирования 3. Метрики и статистика 4. Найденные дефекты 5. Детали по дефектам 6.Критические проблемы 7. Покрытие тестирования 8. Сравнение с критериями выхода 9. Оценка качества 10. Рекомендации и выводы
         </div>
       </section>
-      <section class="section-block fade-in delay-4">
-        <div class="accent-title">Глоссарий</div>
+      <section
+        class="section-block fade-in delay-3"
+        style="background: #f3f6fa"
+      >
+        <div class="accent-title">
+          Чек-листы, тест-кейсы, баг-репорты, отчёты
+        </div>
         <ul class="icon-list">
-          <li><i class="bi bi-file-earmark-text"></i> <b>Test Plan</b> — тест-план</li>
-          <li><i class="bi bi-lightbulb"></i> <b>Test Strategy</b> — тестовая стратегия</li>
-          <li><i class="bi bi-card-checklist"></i> <b>Checklist</b> — чек-лист</li>
-          <li><i class="bi bi-file-earmark-text"></i> <b>Test Case</b> — тест-кейс</li>
-          <li><i class="bi bi-bug"></i> <b>Bug Report</b> — баг-репорт</li>
-          <li><i class="bi bi-clipboard-data"></i> <b>Test Report</b> — отчёт о тестировании</li>
+          <li>
+            <i class="bi bi-card-checklist"></i> <b>Чек-лист</b> — краткий
+            список проверок без подробных шагов
+          </li>
+          <li>
+            <i class="bi bi-file-earmark-text"></i> <b>Тест-кейс</b> —
+            это документированный сценарий или набор действий, который используется для проверки определённого функционала приложения. Он описывает условия, действия и ожидаемый результат , чтобы убедиться, что система ведёт себя так, как задумано.
+          </li>
+          <img class="img-fluid big-img" src="../img/Screenshot_1.png" alt="">
+          <li>
+            <i class="bi bi-bug"></i> <b>Баг-репорт</b> —  это документ, в котором описывается проблема (дефект) в работе программного обеспечения.
+          </li>
+          <img class="img-fluid big-img" src="../img/Screenshot_2.png" alt="">
         </ul>
+        <section class="section-block fade-in" style="background: #f3f6fa;">
+          <div class="accent-title text-center">Жизненный цикл бага</div>
+          <img class="big-img" src="../img/Жизненный-цикл-бага-1.webp" alt="Жизненный цикл бага" />
+          <div class="accent-block mb-2">
+            <b>Этапы:</b> New → Assigned → Fixed → Retest → Closed / Reopened / Rejected / Deferred
+          </div>
+          <ul class="accent-list">
+            <li>New/Open — баг найден и зарегистрирован</li>
+            <li>Assigned — назначен разработчику</li>
+            <li>Fixed — исправлен</li>
+            <li>Retest — проверка исправления</li>
+            <li>Closed — баг закрыт, если не воспроизводится</li>
+            <li>Rejected/Deferred — отклонён или отложен</li>
+          </ul>
+          <div class="accent-block mb-2">
+            <b>Что важно:</b> всегда указывайте шаги воспроизведения, ожидаемый и фактический результат, окружение.
+          </div>
+        </section>
       </section>
-      <section class="section-block fade-in delay-5" style="background: #f3f6fa;">
-        <div class="accent-title"><i class="bi bi-link-45deg"></i> Полезные ресурсы</div>
+      <section
+        class="section-block fade-in delay-5"
+        style="background: #f3f6fa"
+      >
+        <div class="accent-title">
+          <i class="bi bi-link-45deg"></i> Полезные ресурсы
+        </div>
         <ul class="icon-list">
-          <li><i class="bi bi-link-45deg"></i> <a href="https://www.istqb.org/" target="_blank">ISTQB Foundation</a></li>
-          <li><i class="bi bi-link-45deg"></i> <a href="https://www.iso.org/standard/43443.html" target="_blank">IEEE 829 (Standard for Software Test Documentation)</a></li>
-          <li><i class="bi bi-link-45deg"></i> <a href="https://confluence.atlassian.com/" target="_blank">Atlassian Confluence Docs</a></li>
-          <li><i class="bi bi-link-45deg"></i> <a href="https://www.guru99.com/software-testing-documentation.html" target="_blank">Guru99: Software Testing Documentation</a></li>
+          <li>
+            <i class="bi bi-link-45deg"></i>
+            <a href="https://www.istqb.org/" target="_blank"
+              >ISTQB Foundation</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-link-45deg"></i>
+            <a href="https://www.iso.org/standard/43443.html" target="_blank"
+              >IEEE 829 (Standard for Software Test Documentation)</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-link-45deg"></i>
+            <a href="https://confluence.atlassian.com/" target="_blank"
+              >Atlassian Confluence Docs</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-link-45deg"></i>
+            <a
+              href="https://www.guru99.com/software-testing-documentation.html"
+              target="_blank"
+              >Guru99: Software Testing Documentation</a
+            >
+          </li>
         </ul>
       </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
-</html> 
+</html>
