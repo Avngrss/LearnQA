@@ -4,22 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Веб тестирование</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .big-img {
         width: 100%;
         max-width: 600px;
         border-radius: 18px;
-        box-shadow: 0 6px 32px rgba(108,63,197,0.13);
+        box-shadow: 0 6px 32px rgba(108, 63, 197, 0.13);
         margin: 24px auto 32px auto;
         display: block;
       }
       .section-block {
         background: #fff;
         border-radius: 18px;
-        box-shadow: 0 2px 16px rgba(108,63,197,0.07);
+        box-shadow: 0 2px 16px rgba(108, 63, 197, 0.07);
         padding: 32px 24px;
         margin-bottom: 36px;
       }
@@ -48,9 +55,15 @@
         margin-bottom: 18px;
       }
       @media (max-width: 700px) {
-        .section-block { padding: 16px 6px; }
-        .accent-title { font-size: 1.2rem; }
-        .big-img { max-width: 98vw; }
+        .section-block {
+          padding: 16px 6px;
+        }
+        .accent-title {
+          font-size: 1.2rem;
+        }
+        .big-img {
+          max-width: 98vw;
+        }
       }
     </style>
   </head>
@@ -58,20 +71,48 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">LearnQA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobesedovanie.html">Мобильное тестирование</a></li>
-            <li class="nav-item"><a class="nav-link" href="testingtypes.html">Виды тестирования</a></li>
-            <li class="nav-item"><a class="nav-link" href="documentation.html">Документация</a></li>
-            <li class="nav-item"><a class="nav-link" href="testdisain.html">Тест-дизайн</a></li>
-            <li class="nav-item"><a class="nav-link active" href="#">Веб-тестирование</a></li>
-            <li class="nav-item"><a class="nav-link" href="sql.html">SQL</a></li>
-            <li class="nav-item"><a class="nav-link" href="automatedtesting.html">Автоматизация</a></li>
-            <li class="nav-item"><a class="nav-link" href="testdocs.html">Тестовая документация</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobesedovanie.html"
+                >Мобильное тестирование</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testingtypes.html">Виды тестирования</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentation.html">Документация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testdisain.html">Тест-дизайн</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Веб-тестирование</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sql.html">SQL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="automatedtesting.html">Автоматизация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testdocs.html">Тестовая документация</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -79,30 +120,61 @@
     <div class="container">
       <header class="mb-5 text-center">
         <h1>Веб тестирование</h1>
-        <p class="lead">Всё о клиент-серверных архитектурах, HTTP, API, безопасности, логах и современных веб-технологиях.</p>
+        <p class="lead">
+          Всё о клиент-серверных архитектурах, HTTP, API, безопасности, логах и
+          современных веб-технологиях.
+        </p>
       </header>
       <section class="section-block">
         <div class="accent-title">Клиент-серверная архитектура</div>
         <div class="accent-desc">
-          <b>Клиент-серверная архитектура</b> – это система распределения, в которой одни устройства обращаются к другим для получения необходимой информации или выполнения определенных задач. Клиенты отправляют запросы, серверы их обрабатывают и возвращают результат.
+          <b>Клиент-серверная архитектура</b> – это система распределения, в
+          которой одни устройства обращаются к другим для получения необходимой
+          информации или выполнения определенных задач. Клиенты отправляют
+          запросы, серверы их обрабатывают и возвращают результат.
         </div>
-        <div class="type-block mb-2"><b>Одноуровневая архитектура</b> — клиент и сервер на одном уровне, вся логика и интерфейс в одном приложении.</div>
-        <div class="type-block mb-2"><b>Двухуровневая архитектура</b> — клиент и сервер разделены, клиент — UI и часть логики, сервер — данные.</div>
-        <div class="type-block mb-2"><b>Трёхуровневая архитектура</b> — клиент (UI), сервер приложений (логика), сервер БД (данные).</div>
-        <div class="type-block mb-2"><b>Многоуровневая архитектура</b> — добавляются промежуточные слои (кеш, балансировщики и т.д.).</div>
-        <div class="type-block mb-2"><b>Толстый клиент</b> — много логики на клиенте, меньше нагрузка на сервер.</div>
-        <div class="type-block mb-2"><b>Тонкий клиент</b> — минимум логики на клиенте, всё на сервере.</div>
+        <div class="type-block mb-2">
+          <b>Одноуровневая архитектура</b> — клиент и сервер на одном уровне,
+          вся логика и интерфейс в одном приложении.
+        </div>
+        <div class="type-block mb-2">
+          <b>Двухуровневая архитектура</b> — клиент и сервер разделены, клиент —
+          UI и часть логики, сервер — данные.
+        </div>
+        <div class="type-block mb-2">
+          <b>Трёхуровневая архитектура</b> — клиент (UI), сервер приложений
+          (логика), сервер БД (данные).
+        </div>
+        <div class="type-block mb-2">
+          <b>Многоуровневая архитектура</b> — добавляются промежуточные слои
+          (кеш, балансировщики и т.д.).
+        </div>
+        <div class="type-block mb-2">
+          <b>Толстый клиент</b> — много логики на клиенте, меньше нагрузка на
+          сервер.
+        </div>
+        <div class="type-block mb-2">
+          <b>Тонкий клиент</b> — минимум логики на клиенте, всё на сервере.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Разница между архитектурой и технологией</div>
         <ul>
-          <li><b>Архитектура</b> — это модель взаимодействия между компонентами системы клиентом и сервером. Ответ на вопрос <b>"КАК организована система?"</b></li>
-            <ul>
-              <li>Структуру компонентов (клиент, сервер, БД, кэш).</li>
-              <li>Принципы их взаимодействия (запросы, события, сообщения).</li>
-              <li>Масштабируемость и надежность (монолит vs микросервисы).</li>
-            </ul>
-          <li><b>Технология</b> — реализация архитектуры с помощью конкретных протоколов и инструментов (например, HTTP, WebSocket, React).Ответ на вопрос <b>"ЧЕМ реализована система?"</b></li>
+          <li>
+            <b>Архитектура</b> — это модель взаимодействия между компонентами
+            системы клиентом и сервером. Ответ на вопрос
+            <b>"КАК организована система?"</b>
+          </li>
+          <ul>
+            <li>Структуру компонентов (клиент, сервер, БД, кэш).</li>
+            <li>Принципы их взаимодействия (запросы, события, сообщения).</li>
+            <li>Масштабируемость и надежность (монолит vs микросервисы).</li>
+          </ul>
+          <li>
+            <b>Технология</b> — реализация архитектуры с помощью конкретных
+            протоколов и инструментов (например, HTTP, WebSocket, React).Ответ
+            на вопрос <b>"ЧЕМ реализована система?"</b>
+          </li>
           <ul>
             <li>Языки программирования (Python, JavaScript).</li>
             <li>Фреймворки (React, Django, Spring).</li>
@@ -110,7 +182,10 @@
             <li>Базы данных (PostgreSQL, Redis).</li>
           </ul>
         </ul>
-        <div class="type-block mb-2"><b>Пример:</b> Архитектура — браузер отправляет HTTP-запрос на сервер. Технология — используется HTTP, сервер Nginx, данные в JSON.</div>
+        <div class="type-block mb-2">
+          <b>Пример:</b> Архитектура — браузер отправляет HTTP-запрос на сервер.
+          Технология — используется HTTP, сервер Nginx, данные в JSON.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Типы серверов</div>
@@ -126,18 +201,38 @@
       <section class="section-block">
         <div class="accent-title">Модели взаимодействия клиент-сервер</div>
         <ul>
-          <li><b>Request-Response</b> — клиент отправляет запрос, сервер отвечает (REST API, сайты).</li>
-          <li><b>Persistent Connection</b> — постоянное соединение (WebSocket, чаты).</li>
-          <li><b>Publish-Subscribe</b> — подписка на события (Kafka, Firebase).</li>
-          <li><b>Peer-to-Peer</b> — клиенты общаются напрямую (торренты, криптовалюты).</li>
+          <li>
+            <b>Request-Response</b> — клиент отправляет запрос, сервер отвечает
+            (REST API, сайты).
+          </li>
+          <li>
+            <b>Persistent Connection</b> — постоянное соединение (WebSocket,
+            чаты).
+          </li>
+          <li>
+            <b>Publish-Subscribe</b> — подписка на события (Kafka, Firebase).
+          </li>
+          <li>
+            <b>Peer-to-Peer</b> — клиенты общаются напрямую (торренты,
+            криптовалюты).
+          </li>
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">Облачные серверы (Cloud Servers)</div>
-        <div class="type-block mb-2"><b>IaaS</b> — аренда виртуальных машин (AWS EC2, Google Compute Engine).</div>
-        <div class="type-block mb-2"><b>PaaS</b> — готовые платформы для развертывания (Heroku, Firebase).</div>
-        <div class="type-block mb-2"><b>SaaS</b> — готовый софт (Gmail, Google Drive).</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Преимущества облака</div>
+        <div class="type-block mb-2">
+          <b>IaaS</b> — аренда виртуальных машин (AWS EC2, Google Compute
+          Engine).
+        </div>
+        <div class="type-block mb-2">
+          <b>PaaS</b> — готовые платформы для развертывания (Heroku, Firebase).
+        </div>
+        <div class="type-block mb-2">
+          <b>SaaS</b> — готовый софт (Gmail, Google Drive).
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Преимущества облака
+        </div>
         <ul class="accent-list">
           <li>Масштабируемость</li>
           <li>Отказоустойчивость</li>
@@ -146,11 +241,18 @@
       </section>
       <section class="section-block">
         <div class="accent-title">URL</div>
-        <div class="type-block mb-2">URL (Uniform Resource Locator) — адрес уникального ресурса в интернете. Рекомендуется не более 2000 символов.</div>
+        <div class="type-block mb-2">
+          URL (Uniform Resource Locator) — адрес уникального ресурса в
+          интернете. Рекомендуется не более 2000 символов.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Микросервисы и монолиты</div>
-        <div class="type-block mb-2"><b>Монолитная архитектура</b> — Единое приложение, где все компоненты (UI, бизнес-логика, БД) работают в одном процессе и развертываются как единое целое.</div>
+        <div class="type-block mb-2">
+          <b>Монолитная архитектура</b> — Единое приложение, где все компоненты
+          (UI, бизнес-логика, БД) работают в одном процессе и развертываются как
+          единое целое.
+        </div>
         <ul class="accent-list">
           <li>+ Простота разработки и развертывания</li>
           <li>+ Производительность</li>
@@ -159,7 +261,11 @@
           <li>- Зависимость компонентов</li>
           <li>- Ограниченная гибкость</li>
         </ul>
-        <div class="type-block mb-2"><b>Микросервисная архитектура</b> — Приложение разбито на множество небольших независимых сервисов, каждый из которых решает свою задачу и общается с другими через API (HTTP, gRPC, Message Queue).</div>
+        <div class="type-block mb-2">
+          <b>Микросервисная архитектура</b> — Приложение разбито на множество
+          небольших независимых сервисов, каждый из которых решает свою задачу и
+          общается с другими через API (HTTP, gRPC, Message Queue).
+        </div>
         <ul class="accent-list">
           <li>+ Масштабируемость</li>
           <li>+ Гибкость разработки</li>
@@ -171,30 +277,102 @@
       </section>
       <section class="section-block">
         <div class="accent-title">HTTP и HTTPS</div>
-        <div class="type-block mb-2"><b>HTTP (Hypertext Transfer Protocol)</b> — это протокол прикладного уровня, предназначенный для передачи гипертекстовых документов (например, HTML-страниц) между клиентом (браузером) и сервером.</div>
-        <div class="type-block mb-2"><b>HTTPS (Hypertext Transfer Protocol Secure)</b> — это безопасная версия HTTP, которая использует шифрование через SSL/TLS для защиты передаваемых данных.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Версии HTTP</div>
+        <div class="type-block mb-2">
+          <b>HTTP (Hypertext Transfer Protocol)</b> — это протокол прикладного
+          уровня, предназначенный для передачи гипертекстовых документов
+          (например, HTML-страниц) между клиентом (браузером) и сервером.
+        </div>
+        <div class="type-block mb-2">
+          <b>HTTPS (Hypertext Transfer Protocol Secure)</b> — это безопасная
+          версия HTTP, которая использует шифрование через SSL/TLS для защиты
+          передаваемых данных.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Версии HTTP
+        </div>
         <ul>
           <li><b>HTTP/1.0</b> — заголовки, разные типы контента</li>
           <li><b>HTTP/1.1</b> — Keep-Alive, кэширование</li>
-          <li><b>HTTP/2</b> — Разработан на основе протокола SPDY, Мультиплексирование — множество запросов по одному соединению,Сжатие заголовков (HPACK),Приоритезация запросов, Бинарный протокол вместо текстового</li>
-          <li><b>HTTP/3</b> — Разработан на основе протокола QUIC, Переход с TCP на UDP — снижение задержек, Независимость потоков — ошибки в одном потоке не влияют на другие, Быстрая установка соединения (0-RTT handshake), мультиплексирование</li>
+          <li>
+            <b>HTTP/2</b> — Разработан на основе протокола SPDY,
+            Мультиплексирование — множество запросов по одному соединению,Сжатие
+            заголовков (HPACK),Приоритезация запросов, Бинарный протокол вместо
+            текстового
+          </li>
+          <li>
+            <b>HTTP/3</b> — Разработан на основе протокола QUIC, Переход с TCP
+            на UDP — снижение задержек, Независимость потоков — ошибки в одном
+            потоке не влияют на другие, Быстрая установка соединения (0-RTT
+            handshake), мультиплексирование
+          </li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">HTTP-методы</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          HTTP-методы
+        </div>
         <ul>
-          <li>GET, POST, PUT, DELETE, PATCH</li>
-          <li>HEAD, OPTIONS, TRACE, CONNECT</li>
+          <li><b>GET</b> - Назначение: Получение данных с сервера.</li>
+          <li>
+            <b>POST</b> - Создание новых данных или отправка информации на
+            сервер.
+          </li>
+          <li>
+            <b>PUT</b> - Назначение: Полное обновление ресурса (замена всех
+            данных).
+          </li>
+          <li>
+            <b>PATCH</b> - Назначение: Частичное обновление ресурса (изменение
+            только указанных полей).
+          </li>
+          <li><b>DELETE</b> - Назначение: Удаление ресурса.</li>
+          <li>
+            <b>HEAD</b> - Получение метаданных (заголовков) без тела ответа (как
+            GET, но без данных).Использование: Проверка существования ресурса,
+            валидация кэша.
+          </li>
+          <li>
+            <b>OPTIONS</b> - Назначение: Получение списка поддерживаемых методов
+            для ресурса (CORS-запросы).
+          </li>
+          <li>
+            <b>TRACE</b> - Назначение: Отладка (сервер возвращает полученный
+            запрос "как есть").Использование: Проверка изменений запроса
+            прокси-серверами.
+          </li>
+          <li>
+            <b>CONNECT</b> - Назначение: Установка туннеля (например, для HTTPS
+            через прокси).Использование: В основном в прокси-серверах.
+          </li>
         </ul>
-        <div class="type-block mb-2"><b>Идемпотентные методы:</b> GET, PUT, DELETE</div>
+        <div class="type-block mb-2">
+          <b>Идемпотентные методы:</b> GET, PUT, DELETE
+        </div>
         <div class="type-block mb-2"><b>Неидемпотентные методы:</b> POST</div>
-        <div class="type-block mb-2"><b>Кешируемые методы:</b> GET, HEAD, OPTIONS</div>
-        <div class="type-block mb-2"><b>Безопасные методы:</b> GET, HEAD, OPTIONS</div>
-        <div class="type-block mb-2"><b>Небезопасные методы:</b> POST, PUT, DELETE, PATCH</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Структура HTTP-запроса</div>
-        <div class="type-block mb-2">GET /path HTTP/1.0<br>Host: www.example.com<br>User-Agent: Mozilla/5.0<br>Accept: text/html</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Структура HTTP-ответа</div>
-        <div class="type-block mb-2">HTTP/1.1 200 OK<br>Content-Type: text/html<br>Content-Length: 123<br>Body</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">HTTP-коды состояния</div>
+        <div class="type-block mb-2">
+          <b>Кешируемые методы:</b> GET, HEAD, OPTIONS
+        </div>
+        <div class="type-block mb-2">
+          <b>Безопасные методы:</b> GET, HEAD, OPTIONS
+        </div>
+        <div class="type-block mb-2">
+          <b>Небезопасные методы:</b> POST, PUT, DELETE, PATCH
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Структура HTTP-запроса
+        </div>
+        <div class="type-block mb-2">
+          GET /path HTTP/1.0<br />Host: www.example.com<br />User-Agent:
+          Mozilla/5.0<br />Accept: text/html
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Структура HTTP-ответа
+        </div>
+        <div class="type-block mb-2">
+          HTTP/1.1 200 OK<br />Content-Type: text/html<br />Content-Length:
+          123<br />Body
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          HTTP-коды состояния
+        </div>
         <ul>
           <li><b>1xx</b> — информационные</li>
           <li><b>2xx</b> — успешные</li>
@@ -202,64 +380,137 @@
           <li><b>4xx</b> — ошибки клиента</li>
           <li><b>5xx</b> — ошибки сервера</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">HTTP-заголовки</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          HTTP-заголовки
+        </div>
         <ul>
-          <b>Host, User-Agent, Accept, Authorization, Content-Type, Cache-Control, Set-Cookie</b>
+          <b
+            >Host, User-Agent, Accept, Authorization, Content-Type,
+            Cache-Control, Set-Cookie</b
+          >
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">SSL сертификат</div>
-        <div class="type-block mb-2"><b>SSL-сертификат</b> удостоверяет подлинность сайта и позволяет использовать зашифрованное соединение (HTTPS).</div>
+        <div class="type-block mb-2">
+          <b>SSL-сертификат</b> удостоверяет подлинность сайта и позволяет
+          использовать зашифрованное соединение (HTTPS).
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Аутентификация и Авторизация</div>
-        <div class="type-block mb-2"><b>Аутентификация</b> — подтверждение личности пользователя. </div>
-        <div class="type-block mb-2"><b>Авторизация</b> — проверка прав доступа.</div>
-        <img class="big-img" src="../img/difference_between_authorization_and_authentication_ru.png" alt="auth vs authz" />
+        <div class="type-block mb-2">
+          <b>Аутентификация</b> — подтверждение личности пользователя.
+        </div>
+        <div class="type-block mb-2">
+          <b>Авторизация</b> — проверка прав доступа.
+        </div>
+        <img
+          class="big-img"
+          src="../img/difference_between_authorization_and_authentication_ru.png"
+          alt="auth vs authz"
+        />
       </section>
       <section class="section-block">
         <div class="accent-title">Сессия на сайте</div>
-        <div class="type-block mb-2"><b>Сессия</b> — промежуток времени между входом на сайт и его закрытием.</div>
+        <div class="type-block mb-2">
+          <b>Сессия</b> — промежуток времени между входом на сайт и его
+          закрытием.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Токен</div>
-        <div class="type-block mb-2"><b>Токен</b> — средство авторизации для каждого запроса. Генерируются на сервере на основе секретного ключа.</div>
-        <div class="type-block mb-2"><b>Access Token</b> — для доступа к защищённым ресурсам, ограниченный срок действия.</div>
-        <div class="type-block mb-2"><b>Refresh Token</b> — для получения новых access token без повторной аутентификации.</div>
-        <div class="type-block mb-2"><b>JWT</b> — стандартный формат токенов (заголовок, payload, подпись).</div>
+        <div class="type-block mb-2">
+          <b>Токен</b> — средство авторизации для каждого запроса. Генерируются
+          на сервере на основе секретного ключа.
+        </div>
+        <div class="type-block mb-2">
+          <b>Access Token</b> — для доступа к защищённым ресурсам, ограниченный
+          срок действия.
+        </div>
+        <div class="type-block mb-2">
+          <b>Refresh Token</b> — для получения новых access token без повторной
+          аутентификации.
+        </div>
+        <div class="type-block mb-2">
+          <b>JWT</b> — стандартный формат токенов (заголовок, payload, подпись).
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Cashe и cookie</div>
-        <div class="type-block mb-2"><b>Кэш</b> — это механизм хранения копий ресурсов (HTML, CSS, JS, изображения и т.д.) локально в браузере или промежуточных серверах (CDN), чтобы ускорить загрузку страниц.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Цель:</div>
+        <div class="type-block mb-2">
+          <b>Кэш</b> — это механизм хранения копий ресурсов (HTML, CSS, JS,
+          изображения и т.д.) локально в браузере или промежуточных серверах
+          (CDN), чтобы ускорить загрузку страниц.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">Цель:</div>
         <ul>
           <li>Снизить нагрузку на сервер</li>
           <li>Ускорить загрузку страниц</li>
           <li>Уменьшить объём передаваемых данных</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Виды кэширования:</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Виды кэширования:
+        </div>
         <ul>
-          <li><b>Browser cache</b> - Хранится в браузере. Самый распространённый тип.</li>
-          <li><b>Memory cache</b> - Хранится в оперативной памяти. Быстрее, но очищается при перезагрузке.</li>
-          <li><b>Disk cache</b> - Хранится на диске. Медленнее, но сохраняется между сессиями.</li>
-          <li><b>Service Worker cache</b> - Управляемый JS-скриптом. Используется в PWA.</li>
-          <li><b>CDN cache</b> - Кэшируется на серверах Content Delivery Network.</li>
+          <li>
+            <b>Browser cache</b> - Хранится в браузере. Самый распространённый
+            тип.
+          </li>
+          <li>
+            <b>Memory cache</b> - Хранится в оперативной памяти. Быстрее, но
+            очищается при перезагрузке.
+          </li>
+          <li>
+            <b>Disk cache</b> - Хранится на диске. Медленнее, но сохраняется
+            между сессиями.
+          </li>
+          <li>
+            <b>Service Worker cache</b> - Управляемый JS-скриптом. Используется
+            в PWA.
+          </li>
+          <li>
+            <b>CDN cache</b> - Кэшируется на серверах Content Delivery Network.
+          </li>
         </ul>
-        <div class="type-block mb-2"><b>Cookie</b> —  это небольшие фрагменты данных, которые сервер отправляет клиенту (браузеру) с помощью HTTP-заголовка Set-Cookie. Браузер сохраняет эти данные и отправляет их обратно на сервер при последующих запросах.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Основные цели использования:</div>
+        <div class="type-block mb-2">
+          <b>Cookie</b> — это небольшие фрагменты данных, которые сервер
+          отправляет клиенту (браузеру) с помощью HTTP-заголовка Set-Cookie.
+          Браузер сохраняет эти данные и отправляет их обратно на сервер при
+          последующих запросах.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Основные цели использования:
+        </div>
         <ul>
           <li>Идентификация пользователя</li>
           <li>Управление сессией (логин/выход)</li>
           <li>Персонализация содержимого</li>
           <li>Трекинг активности</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Виды куков</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Виды куков
+        </div>
         <ul>
-          <li><b>Сессионные куки</b> - Хранятся только во время сеанса браузера. Они удаляются автоматически при закрытии браузера.</li>
-          <li><b>Перманентные куки</b> - это куки, которые сохраняются на устройстве пользователя даже после закрытия браузера . Они удаляются только по истечении срока действия, указанного в параметрах Expires или Max-Age.</li>
-          <li><b>Первичные куки</b> - это куки, которые устанавливаются тем сайтом, который вы просматриваете прямо сейчас . То есть домен в адресной строке совпадает с доменом, устанавливающим куку.</li>
+          <li>
+            <b>Сессионные куки</b> - Хранятся только во время сеанса браузера.
+            Они удаляются автоматически при закрытии браузера.
+          </li>
+          <li>
+            <b>Перманентные куки</b> - это куки, которые сохраняются на
+            устройстве пользователя даже после закрытия браузера . Они удаляются
+            только по истечении срока действия, указанного в параметрах Expires
+            или Max-Age.
+          </li>
+          <li>
+            <b>Первичные куки</b> - это куки, которые устанавливаются тем
+            сайтом, который вы просматриваете прямо сейчас . То есть домен в
+            адресной строке совпадает с доменом, устанавливающим куку.
+          </li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Заголовки безопасности кук:</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Заголовки безопасности кук:
+        </div>
         <ul>
           <li><b>Secure:</b> передавать только по HTTPS</li>
           <li><b>HttpOnly:</b> недоступны из JavaScript</li>
@@ -268,87 +519,168 @@
       </section>
       <section class="section-block">
         <div class="accent-title">API</div>
-        <div class="type-block mb-2"><b>API (Application Programming Interface)</b> — это набор правил и методов , с помощью которых одно программное обеспечение может взаимодействовать с другим.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Общая схема взаимодействия</div>
+        <div class="type-block mb-2">
+          <b>API (Application Programming Interface)</b> — это набор правил и
+          методов , с помощью которых одно программное обеспечение может
+          взаимодействовать с другим.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Общая схема взаимодействия
+        </div>
         <ul>
-          <li>Клиент (браузер, мобильное приложение, сервер) отправляет запрос к API.</li>
+          <li>
+            Клиент (браузер, мобильное приложение, сервер) отправляет запрос к
+            API.
+          </li>
           <li>Сервер получает запрос, обрабатывает его.</li>
           <li>Сервер формирует ответ (обычно в формате JSON или XML).</li>
           <li>Ответ отправляется обратно клиенту.</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Основные компоненты API</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Основные компоненты API
+        </div>
         <ul>
-          <li><b>Endpoint</b> - URL, по которому доступен определённый ресурс. Например:/api/users</li>
-          <li><b>Методы HTTP</b> - GET, POST, PUT, DELETE и др. Определяют тип операции</li>
-          <li><b>Заголовки (Headers)</b> - Содержат метаданные: авторизацию, тип данных и т.д.</li>
-          <li><b>Параметры</b> - Данные, передаваемые в запросе(query parameters,path parameters, body)</li>
-          <li><b>Тело запроса/ответа (Body)</b> - Данные, передаваемые в запросе/ответе.Содержит данные, например, JSON или XML</li>
+          <li>
+            <b>Endpoint</b> - URL, по которому доступен определённый ресурс.
+            Например:/api/users
+          </li>
+          <li>
+            <b>Методы HTTP</b> - GET, POST, PUT, DELETE и др. Определяют тип
+            операции
+          </li>
+          <li>
+            <b>Заголовки (Headers)</b> - Содержат метаданные: авторизацию, тип
+            данных и т.д.
+          </li>
+          <li>
+            <b>Параметры</b> - Данные, передаваемые в запросе(query
+            parameters,path parameters, body)
+          </li>
+          <li>
+            <b>Тело запроса/ответа (Body)</b> - Данные, передаваемые в
+            запросе/ответе.Содержит данные, например, JSON или XML
+          </li>
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">Виды API</div>
-        <div class="type-block mb-2"><b>REST API</b> — архитектурный стиль, работает через HTTP, возвращает JSON или XML.</div>
-        <div class="type-block mb-2"><b>SOAP API</b> — использует XML, строгие стандарты, часто в корпоративных приложениях.</div>
-        <div class="type-block mb-2"><b>GraphQL</b> — язык запросов, позволяет получать только нужные данные.</div>
-        <div class="type-block mb-2"><b>WebSocket API</b> — двусторонняя связь, подходит для чатов и онлайн-игр.</div>
-        <div class="type-block mb-2"><b>gRPC API</b> — Высокопроизводительный RPC-протокол, использующий Protobuf</div>
+        <div class="type-block mb-2">
+          <b>REST API</b> — архитектурный стиль, работает через HTTP, возвращает
+          JSON или XML.
+        </div>
+        <div class="type-block mb-2">
+          <b>SOAP API</b> — использует XML, строгие стандарты, часто в
+          корпоративных приложениях.
+        </div>
+        <div class="type-block mb-2">
+          <b>GraphQL</b> — язык запросов, позволяет получать только нужные
+          данные.
+        </div>
+        <div class="type-block mb-2">
+          <b>WebSocket API</b> — двусторонняя связь, подходит для чатов и
+          онлайн-игр.
+        </div>
+        <div class="type-block mb-2">
+          <b>gRPC API</b> — Высокопроизводительный RPC-протокол, использующий
+          Protobuf
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">REST</div>
-        <div class="type-block mb-2"><b>REST (Representational State Transfer)</b> — это архитектурный стиль для создания API. Он основан на использовании стандартных методов HTTP.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Плюсы</div>
+        <div class="type-block mb-2">
+          <b>REST (Representational State Transfer)</b> — это архитектурный
+          стиль для создания API. Он основан на использовании стандартных
+          методов HTTP.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">Плюсы</div>
         <ul>
           <li>Простота и легкость</li>
           <li>Гибкость и универсальность</li>
           <li>Совместимость с браузерами</li>
           <li>Меньшая нагрузка на сервер</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Минусы</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">Минусы</div>
         <ul>
           <li>Ограниченная стандартная спецификация</li>
           <li>Нет встроенных механизмов безопасности</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Основные принципы REST:</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Основные принципы REST:
+        </div>
         <ul>
-          <li><b>Stateless (без сохранения состояния)</b> — каждый запрос содержит всю необходимую информацию.</li>
-          <li><b>Uniform Interface (единый интерфейс)</b> — стандартные пути и методы.</li>
-          <li><b>Client-server (клиент-сервер)</b> — разделение клиентской и серверной логики.</li>
-          <li><b>Cacheable (кэшируемость)</b> — ответы могут быть кэшированы.</li>
-          <li><b>Layered system (многоуровневая система)</b> — клиент может взаимодействовать с промежуточными слоями.</li>
+          <li>
+            <b>Stateless (без сохранения состояния)</b> — каждый запрос содержит
+            всю необходимую информацию.
+          </li>
+          <li>
+            <b>Uniform Interface (единый интерфейс)</b> — стандартные пути и
+            методы.
+          </li>
+          <li>
+            <b>Client-server (клиент-сервер)</b> — разделение клиентской и
+            серверной логики.
+          </li>
+          <li>
+            <b>Cacheable (кэшируемость)</b> — ответы могут быть кэшированы.
+          </li>
+          <li>
+            <b>Layered system (многоуровневая система)</b> — клиент может
+            взаимодействовать с промежуточными слоями.
+          </li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Авторизация в API:</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Авторизация в API:
+        </div>
         <ul>
           <li><b>API Key</b> — Простой ключ в заголовке или параметре</li>
           <li><b>Basic Auth</b> — Логин/пароль в заголовке Authorization</li>
-          <li><b>Bearer Token</b> — Токен в заголовке: Authorization: Bearer token</li>
-          <li><b>OAuth 2.0</b> — Стандарт авторизации, часто используется в соцсетях</li>
-          <li><b>JWT (JSON Web Token)</b> — Самостоятельный токен, содержащий полезную нагрузку</li>
+          <li>
+            <b>Bearer Token</b> — Токен в заголовке: Authorization: Bearer token
+          </li>
+          <li>
+            <b>OAuth 2.0</b> — Стандарт авторизации, часто используется в
+            соцсетях
+          </li>
+          <li>
+            <b>JWT (JSON Web Token)</b> — Самостоятельный токен, содержащий
+            полезную нагрузку
+          </li>
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">SOAP</div>
-        <div class="type-block mb-2"><b>SOAP</b> — Он использует формат XML для передачи данных и может работать поверх различных транспортных протоколов: HTTP, SMTP, TCP и др.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Плюсы</div>
+        <div class="type-block mb-2">
+          <b>SOAP</b> — Он использует формат XML для передачи данных и может
+          работать поверх различных транспортных протоколов: HTTP, SMTP, TCP и
+          др.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">Плюсы</div>
         <ul>
           <li>Строгая спецификация и стандарты</li>
           <li>Встроенные механизмы безопасности</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Минусы</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">Минусы</div>
         <ul>
           <li>Сложность и объемность</li>
           <li>Требовательность к ресурсам</li>
           <li>Меньшая гибкость</li>
           <li>Не всегда совместим с браузерами</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Как работает SOAP?</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Как работает SOAP?
+        </div>
         <ul>
           <li>Клиент отправляет SOAP-запрос на сервер.</li>
-          <li>Сервер получает запрос, парсит XML, выполняет нужную операцию.</li>
+          <li>
+            Сервер получает запрос, парсит XML, выполняет нужную операцию.
+          </li>
           <li>Сервер возвращает ответ в виде XML-документа.</li>
           <li>Клиент получает и обрабатывает результат.</li>
         </ul>
         <div class="accent-title">WSDL (Web Services Description Language)</div>
-        <div class="type-block mb-2"><b>WSDL</b> — это XML-документ, описывающий SOAP-сервис:</div>
+        <div class="type-block mb-2">
+          <b>WSDL</b> — это XML-документ, описывающий SOAP-сервис:
+        </div>
         <ul>
           <li>Какие операции доступны</li>
           <li>Какие параметры принимают</li>
@@ -358,29 +690,63 @@
       </section>
       <section class="section-block">
         <div class="accent-title">Web-Service</div>
-        <div class="type-block mb-2"><b>Web-Service (веб-сервис)</b> — это программная система, предназначенная для взаимодействия между приложениями через интернет с использованием стандартных протоколов и форматов данных.</div>
-        <div class="type-block mb-2"><b>Основные характеристики веб-сервисов:</b></div>
+        <div class="type-block mb-2">
+          <b>Web-Service (веб-сервис)</b> — это программная система,
+          предназначенная для взаимодействия между приложениями через интернет с
+          использованием стандартных протоколов и форматов данных.
+        </div>
+        <div class="type-block mb-2">
+          <b>Основные характеристики веб-сервисов:</b>
+        </div>
         <ul>
           <li>Работа через сеть – доступен по HTTP/HTTPS.</li>
-          <li>Стандартизированный обмен данными – использует XML, JSON, SOAP, REST и другие форматы.</li>
-          <li>Независимость от платформы и языка – клиент и сервер могут быть написаны на разных языках (Java, Python, C# и т. д.).</li>
-          <li>Модульность — может быть частью более крупной системы (например, микросервиса).</li>
+          <li>
+            Стандартизированный обмен данными – использует XML, JSON, SOAP, REST
+            и другие форматы.
+          </li>
+          <li>
+            Независимость от платформы и языка – клиент и сервер могут быть
+            написаны на разных языках (Java, Python, C# и т. д.).
+          </li>
+          <li>
+            Модульность — может быть частью более крупной системы (например,
+            микросервиса).
+          </li>
         </ul>
         <div class="type-block mb-2"><b>Типы веб-сервисов:</b></div>
         <ul>
-          <li><b>SOAP (Simple Object Access Protocol)</b> - Использует XML для обмена сообщениями. Жёсткие стандарты (WSDL для описания сервиса).</li>
-          <li><b>REST (Representational State Transfer)</b> – Работает через HTTP (GET, POST, PUT, DELETE).Использует JSON (реже XML).</li>
-          <li><b>GraphQL (альтернатива REST)</b> – Позволяет клиенту запрашивать только нужные данные.</li>
+          <li>
+            <b>SOAP (Simple Object Access Protocol)</b> - Использует XML для
+            обмена сообщениями. Жёсткие стандарты (WSDL для описания сервиса).
+          </li>
+          <li>
+            <b>REST (Representational State Transfer)</b> – Работает через HTTP
+            (GET, POST, PUT, DELETE).Использует JSON (реже XML).
+          </li>
+          <li>
+            <b>GraphQL (альтернатива REST)</b> – Позволяет клиенту запрашивать
+            только нужные данные.
+          </li>
         </ul>
-        <div class="type-block mb-2"><b>Все веб-сервисы — это API, но не все API — веб-сервисы.</b></div>
+        <div class="type-block mb-2">
+          <b>Все веб-сервисы — это API, но не все API — веб-сервисы.</b>
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">JSON</div>
-        <div class="type-block mb-2"><b>JSON</b> — текстовый формат обмена данными, основанный на JavaScript.</div>
+        <div class="type-block mb-2">
+          <b>JSON</b> — текстовый формат обмена данными, основанный на
+          JavaScript.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Снифферы трафика</div>
-        <div class="type-block mb-2"><b>Снифферы</b> — то программа или устройство, которое перехватывает и анализирует сетевой трафик в реальном времени. Оно позволяет увидеть все данные, передаваемые между устройствами в сети: IP-адреса, порты, содержимое пакетов и даже текстовые данные (например, HTTP-запросы).</div>
+        <div class="type-block mb-2">
+          <b>Снифферы</b> — то программа или устройство, которое перехватывает и
+          анализирует сетевой трафик в реальном времени. Оно позволяет увидеть
+          все данные, передаваемые между устройствами в сети: IP-адреса, порты,
+          содержимое пакетов и даже текстовые данные (например, HTTP-запросы).
+        </div>
         <ul>
           <li>Перехват данных</li>
           <li>Анализ трафика</li>
@@ -390,15 +756,24 @@
       </section>
       <section class="section-block">
         <div class="accent-title">Брокеры сообщений (Kafka)</div>
-        <div class="type-block mb-2"><b>Apache Kafka</b> — распределённая платформа для передачи, хранения и анализа сообщений в реальном времени.</div>
+        <div class="type-block mb-2">
+          <b>Apache Kafka</b> — распределённая платформа для передачи, хранения
+          и анализа сообщений в реальном времени.
+        </div>
         <ul>
           <li>Продюсер — отправляет сообщения</li>
           <li>Потребитель — получает сообщения</li>
           <li>Брокер — передаёт сообщения</li>
           <li>Топик — виртуальное хранилище сообщений</li>
         </ul>
-        <img class="big-img" src="https://blog.skillfactory.ru/wp-content/uploads/2023/02/kafka-1-2083805.png" alt="Kafka схема" />
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Применение Kafka</div>
+        <img
+          class="big-img"
+          src="https://blog.skillfactory.ru/wp-content/uploads/2023/02/kafka-1-2083805.png"
+          alt="Kafka схема"
+        />
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Применение Kafka
+        </div>
         <ul>
           <li>Аналитика в реальном времени</li>
           <li>Сбор логов</li>
@@ -409,61 +784,158 @@
       </section>
       <section class="section-block">
         <div class="accent-title">Модель OSI</div>
-        <div class="type-block mb-2"><b>OSI</b> — семиуровневая модель взаимодействия сетевых устройств.</div>
+        <div class="type-block mb-2">
+          <b>OSI</b> — семиуровневая модель взаимодействия сетевых устройств.
+        </div>
         <img class="big-img" src="../img/OSI.jpg" alt="OSI" />
-        <div class="type-block mb-2"><b>Физический уровень</b> — передача данных через среду (кабели, беспроводные каналы).</div>
-        <div class="type-block mb-2"><b>Канальный уровень</b> — передача данных между устройствами в локальной сети.</div>
-        <div class="type-block mb-2"><b>Сетевой уровень</b> — маршрутизация и адресация.</div>
-        <div class="type-block mb-2"><b>Транспортный уровень</b> — контроль передачи данных, надежность.</div>
-        <div class="type-block mb-2"><b>Сеансовый уровень</b> — управление сессиями связи.</div>
-        <div class="type-block mb-2"><b>Представительный уровень</b> — преобразование, шифрование, сжатие данных.</div>
-        <div class="type-block mb-2"><b>Прикладной уровень</b> — доступ приложений к сети и ресурсам.</div>
+        <div class="type-block mb-2">
+          <b>Физический уровень</b> — передача данных через среду (кабели,
+          беспроводные каналы).
+        </div>
+        <div class="type-block mb-2">
+          <b>Канальный уровень</b> — передача данных между устройствами в
+          локальной сети.
+        </div>
+        <div class="type-block mb-2">
+          <b>Сетевой уровень</b> — маршрутизация и адресация.
+        </div>
+        <div class="type-block mb-2">
+          <b>Транспортный уровень</b> — контроль передачи данных, надежность.
+        </div>
+        <div class="type-block mb-2">
+          <b>Сеансовый уровень</b> — управление сессиями связи.
+        </div>
+        <div class="type-block mb-2">
+          <b>Представительный уровень</b> — преобразование, шифрование, сжатие
+          данных.
+        </div>
+        <div class="type-block mb-2">
+          <b>Прикладной уровень</b> — доступ приложений к сети и ресурсам.
+        </div>
       </section>
       <section class="section-block">
         <div class="accent-title">Модель TCP/IP</div>
-        <div class="type-block mb-2"><b>Модель TCP/IP</b> — это концептуальная модель, описывающая, как данные передаются через сеть. Она легла в основу интернета и определяет стандарты взаимодействия сетевых устройств.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Уровни модели TCP/IP</div>
+        <div class="type-block mb-2">
+          <b>Модель TCP/IP</b> — это концептуальная модель, описывающая, как
+          данные передаются через сеть. Она легла в основу интернета и
+          определяет стандарты взаимодействия сетевых устройств.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Уровни модели TCP/IP
+        </div>
         <ul>
-          <li><b>Прикладной уровень (Application Layer)</b> - Обеспечивает взаимодействие приложений с сетью. Протоколы HTTP, HTTPS, FTP, SMTP, DNS, SSH</li>
-          <li><b>Транспортный уровень (Transport Layer)</b> - Передача данных между хостами, контроль ошибок, потока, доставки. Протоколы TCP, UDP</li>
-          <li><b>Сетевой уровень / Интернет-уровень (Internet Layer)</b> - Маршрутизация пакетов между сетями (по IP-адресам). Протоколы IP, ICMP, ARP, IGMP</li>
-          <li><b>Канальный (Link/Network Access)</b> - Передача данных внутри одной сети (по MAC-адресам). Протоколы Ethernet, Wi-Fi, PPP, MAC</li>
+          <li>
+            <b>Прикладной уровень (Application Layer)</b> - Обеспечивает
+            взаимодействие приложений с сетью. Протоколы HTTP, HTTPS, FTP, SMTP,
+            DNS, SSH
+          </li>
+          <li>
+            <b>Транспортный уровень (Transport Layer)</b> - Передача данных
+            между хостами, контроль ошибок, потока, доставки. Протоколы TCP, UDP
+          </li>
+          <li>
+            <b>Сетевой уровень / Интернет-уровень (Internet Layer)</b> -
+            Маршрутизация пакетов между сетями (по IP-адресам). Протоколы IP,
+            ICMP, ARP, IGMP
+          </li>
+          <li>
+            <b>Канальный (Link/Network Access)</b> - Передача данных внутри
+            одной сети (по MAC-адресам). Протоколы Ethernet, Wi-Fi, PPP, MAC
+          </li>
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">TCP и UDP</div>
-        <div class="type-block mb-2"><b>TCP (Transmission Control Protocol)</b> — Надежная доставка данных с установкой соединения.</div>
+        <div class="type-block mb-2">
+          <b>TCP (Transmission Control Protocol)</b> — Надежная доставка данных
+          с установкой соединения.
+        </div>
         <ul>
-          <li><b style="color: green;">Гарантированная доставка</b> – если пакет потерялся, TCP отправит его заново.</li>
-          <li><b style="color: green;">Контроль перегрузок</b> – автоматически регулирует скорость передачи, чтобы не перегружать сеть.</li>
-          <li><b style="color: green;">Порядок пакетов</b> – данные приходят в том же порядке, в котором были отправлены.</li>
-          <li><b style="color: red;">Высокие накладные расходы</b> – из-за подтверждений и контроля.</li>
-          <li><b style="color: red;">Задержки</b> – не подходит для реального времени (видеозвонки, игры).</li>
+          <li>
+            <b style="color: green">Гарантированная доставка</b> – если пакет
+            потерялся, TCP отправит его заново.
+          </li>
+          <li>
+            <b style="color: green">Контроль перегрузок</b> – автоматически
+            регулирует скорость передачи, чтобы не перегружать сеть.
+          </li>
+          <li>
+            <b style="color: green">Порядок пакетов</b> – данные приходят в том
+            же порядке, в котором были отправлены.
+          </li>
+          <li>
+            <b style="color: red">Высокие накладные расходы</b> – из-за
+            подтверждений и контроля.
+          </li>
+          <li>
+            <b style="color: red">Задержки</b> – не подходит для реального
+            времени (видеозвонки, игры).
+          </li>
         </ul>
-        <div class="type-block mb-2"><b>UDP (User Datagram Protocol)</b> — Быстрая, но ненадежная передача без установки соединения.</div>
+        <div class="type-block mb-2">
+          <b>UDP (User Datagram Protocol)</b> — Быстрая, но ненадежная передача
+          без установки соединения.
+        </div>
         <ul>
-          <li><b style="color: green;">Минимальные задержки</b> – нет подтверждений и повторных отправок.</li>
-          <li><b style="color: green;">Низкие накладные расходы </b>– меньше служебных данных в заголовках.</li>
-          <li><b style="color: red;">Нет гарантии доставки </b>– потерянные пакеты не восстанавливаются.</li>
-          <li><b style="color: red;">Нет контроля порядка</b> – пакеты могут приходить в разной последовательности.</li>
+          <li>
+            <b style="color: green">Минимальные задержки</b> – нет подтверждений
+            и повторных отправок.
+          </li>
+          <li>
+            <b style="color: green">Низкие накладные расходы </b>– меньше
+            служебных данных в заголовках.
+          </li>
+          <li>
+            <b style="color: red">Нет гарантии доставки </b>– потерянные пакеты
+            не восстанавливаются.
+          </li>
+          <li>
+            <b style="color: red">Нет контроля порядка</b> – пакеты могут
+            приходить в разной последовательности.
+          </li>
         </ul>
         <img class="big-img" src="../img/Tablitsa.png" alt="TCP vs UDP" />
       </section>
       <section class="section-block">
         <div class="accent-title">QUIC</div>
-        <div class="type-block mb-2">QUIC (Quick UDP Internet Connections) — Современный протокол на основе UDP с улучшенной безопасностью и скоростью, обеспечивает мультипоточность, приоритезацию, сквозное шифрование. Лежит в основе HTTP/3.</div>
+        <div class="type-block mb-2">
+          QUIC (Quick UDP Internet Connections) — Современный протокол на основе
+          UDP с улучшенной безопасностью и скоростью, обеспечивает
+          мультипоточность, приоритезацию, сквозное шифрование. Лежит в основе
+          HTTP/3.
+        </div>
         <ul>
-          <li><b style="color: green;">Быстрое установление соединения</b> – 0-RTT или 1-RTT вместо 3-way handshake в TCP</li>
-          <li><b style="color: green;">Встроенное шифрование</b>– использует TLS 1.3 по умолчанию</li>
-          <li><b style="color: green;">Устойчивость к смене сети </b>– например, при переходе с Wi-Fi на мобильный интернет</li>
-          <li><b style="color: green;">Мультиплексирование</b> – несколько потоков данных в одном соединении (как в HTTP/2).</li>
-          <li><b style="color: red;">Не все сети поддерживают </b> – некоторые фаерволлы блокируют QUIC</li>
+          <li>
+            <b style="color: green">Быстрое установление соединения</b> – 0-RTT
+            или 1-RTT вместо 3-way handshake в TCP
+          </li>
+          <li>
+            <b style="color: green">Встроенное шифрование</b>– использует TLS
+            1.3 по умолчанию
+          </li>
+          <li>
+            <b style="color: green">Устойчивость к смене сети </b>– например,
+            при переходе с Wi-Fi на мобильный интернет
+          </li>
+          <li>
+            <b style="color: green">Мультиплексирование</b> – несколько потоков
+            данных в одном соединении (как в HTTP/2).
+          </li>
+          <li>
+            <b style="color: red">Не все сети поддерживают </b> – некоторые
+            фаерволлы блокируют QUIC
+          </li>
         </ul>
       </section>
       <section class="section-block">
         <div class="accent-title">Логи</div>
-        <div class="type-block mb-2"><b>Логи</b> — записи о событиях, ошибках, действиях пользователей и состоянии системы.</div>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Виды логов</div>
+        <div class="type-block mb-2">
+          <b>Логи</b> — записи о событиях, ошибках, действиях пользователей и
+          состоянии системы.
+        </div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Виды логов
+        </div>
         <ul>
           <li>Логи ошибок</li>
           <li>Логи производительности</li>
@@ -471,7 +943,9 @@
           <li>Логи тестирования</li>
           <li>Логи событий</li>
         </ul>
-        <div class="accent-title mt-4" style="font-size:1.3rem;">Уровни логирования</div>
+        <div class="accent-title mt-4" style="font-size: 1.3rem">
+          Уровни логирования
+        </div>
         <ul>
           <li><b>DEBUG</b> — для отладки</li>
           <li><b>INFO</b> — обычные события</li>
@@ -481,6 +955,9 @@
         </ul>
       </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
