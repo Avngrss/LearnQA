@@ -81,6 +81,14 @@ h1, h2, h3, h4 {
     background: linear-gradient(90deg, #3a8dde 60%, #6c3fc5 100%);
 }
 
+/* Shared navbar active/hover state */
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #6c3fc5 !important;
+    font-weight: 700;
+}
+
 ul, ol {
     margin: 0 0 16px 24px;
 }
